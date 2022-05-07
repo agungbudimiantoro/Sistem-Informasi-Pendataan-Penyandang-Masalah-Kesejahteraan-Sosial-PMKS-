@@ -46,10 +46,6 @@ if ($_SESSION['level'] != 'admin') {
     });
     $('.dropdown-toggle').dropdown();
   </script>
-  <?php if ($p == '' || $p == 'dashboard') {
-    include "data/dashboard.php";
-  }
-  ?>
 </body>
 
 </html>
