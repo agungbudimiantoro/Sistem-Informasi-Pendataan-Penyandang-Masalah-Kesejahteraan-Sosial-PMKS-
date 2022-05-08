@@ -28,7 +28,7 @@
                             <ul class="dropdown-menu dropdown-menu-light">
                                 <li><a class="dropdown-item" href="?p=user_data">Data User</a></li>
                                 <li><a class="dropdown-item" href="?p=jenis_data">Data Jenis PMKS</a></li>
-                                <li><a class="dropdown-item" href="?p=subject_data">Data Subject</a></li>
+                                <li><a class="dropdown-item" href="?p=subjek_data">Data Subject</a></li>
                                 <li><a class="dropdown-item" href="?p=pmks_data">Data PMKS</a></li>
                                 <li><a class="dropdown-item" href="?p=tindakan_data">Data Tindakan</a></li>
                             </ul>

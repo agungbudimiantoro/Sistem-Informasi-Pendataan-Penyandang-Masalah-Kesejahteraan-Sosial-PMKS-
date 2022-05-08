@@ -46,6 +46,23 @@ if ($p == "") {
     $nav     = "jenis";
     $judul     = "jenis proses";
     $ambil     = "mod_jenis/$p.php";
+} elseif ($p == "subjek_data") {
+    //subjek 
+    $nav     = "subjek";
+    $judul     = "subjek data";
+    $ambil     = "mod_subjek/$p.php";
+} elseif ($p == "subjek_tambah") {
+    $nav     = "subjek";
+    $judul     = "subjek tambah";
+    $ambil     = "mod_subjek/$p.php";
+} elseif ($p == "subjek_edit") {
+    $nav     = "subjek";
+    $judul     = "subjek edit";
+    $ambil     = "mod_subjek/$p.php";
+} elseif ($p == "subjek_proses") {
+    $nav     = "subjek";
+    $judul     = "subjek proses";
+    $ambil     = "mod_subjek/$p.php";
 } else {
     $nav     = "Dashboard";
     $judul     = "dashboard";
