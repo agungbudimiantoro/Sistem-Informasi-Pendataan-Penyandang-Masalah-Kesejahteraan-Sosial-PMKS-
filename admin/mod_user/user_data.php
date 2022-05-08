@@ -41,7 +41,7 @@ $id_hitung = $hrf . sprintf("%03s", $urt);
                         <?= $no++ ?>
                     </td>
                     <td>
-                        <?= $data['foto'] ?>
+                        <img src="../assets/img/avatar/<?= $data['foto'] ?>" alt="" width="50px" height="50px">
                     </td>
                     <td>
                         <?= $data['nm_user'] ?>
@@ -71,7 +71,8 @@ $id_hitung = $hrf . sprintf("%03s", $urt);
                         <?= $data['sts'] ?>
                     </td>
                     <td>
-                        <a href="?p=user_edit_pass&id=<?= $data['id_user'] ?>" class="btn btn-success">Edit Password</a>
+                        <a href="?p=user_edit_pass&id=<?= $data['id_user'] ?>" class="btn btn-primary">Edit Password</a>
+                        <a href="?p=user_edit_foto&id=<?= $data['id_user'] ?>" class="btn btn-success">edit foto</a>
                         <a href="?p=user_edit&id=<?= $data['id_user'] ?>" class="btn btn-warning">Ubah</a>
                         <a href="?p=user_proses&id=<?= $data['id_user'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
                     </td>

@@ -1,5 +1,5 @@
    <h3 class="text-center text-capitalize mb-3">input Data User</h3>
-   <form action="?p=user_proses" method="POST">
+   <form action="?p=user_proses" method="POST" enctype="multipart/form-data">
        <div class="row">
            <div class="col-md-6">
                <div class="mb-3">
@@ -28,8 +28,10 @@
                </div>
                <div class="mb-3">
                    <label style="text-transform:capitalize;" for="foto" class="form-label">foto</label>
-                   <input type="file" name="foto" class="form-control" id="foto" aria-describedby="emailHelp" required>
+                   <small class="form-text text-muted">Extensi File Hanya .DOC, .DOCX, </small>
+                   <input type="file" name="file" class="form-control" onchange="validate(this);" id="foto" aria-describedby="emailHelp" required>
                </div>
+
            </div>
            <div class="col-md-6">
                <div class="mb-3">
@@ -58,7 +60,7 @@
                </div>
                <div class="mb-3">
                    <label style="text-transform:capitalize;" for="password" class="form-label">password</label>
-                   <input type="text" name="pass" class="form-control" id="password" aria-describedby="emailHelp" required>
+                   <input type="password" name="pass" class="form-control" id="password" aria-describedby="emailHelp" required>
                </div>
                <div class="mb-3">
                    <label style="text-transform:capitalize;" for="exampleInputPassword1" class="form-label">Level</label>
@@ -75,3 +77,30 @@
        </div>
 
    </form>
+
+   <script>
+       var _validFileExtensions = [".jpg", ".png"];
+
+       function validate(file) {
+           if (file.type == "file") {
+               var sFileName = file.value;
+               if (sFileName.length > 0) {
+                   var blnValid = false;
+                   for (var j = 0; j < _validFileExtensions.length; j++) {
+                       var sCurExtension = _validFileExtensions[j];
+                       if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                           blnValid = true;
+                           break;
+                       }
+                   }
+
+                   if (!blnValid) {
+                       alert("Maaf, Hanya File yang Berextensi : " + _validFileExtensions.join(", "));
+                       file.value = "";
+                       return false;
+                   }
+               }
+           }
+           return true;
+       }
+   </script>

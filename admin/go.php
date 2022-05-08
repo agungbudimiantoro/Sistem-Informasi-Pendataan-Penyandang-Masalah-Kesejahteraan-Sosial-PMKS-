@@ -21,6 +21,14 @@ if ($p == "") {
     $nav     = "User";
     $judul     = "User proses";
     $ambil     = "mod_user/$p.php";
+} elseif ($p == "user_edit_foto") {
+    $nav     = "User";
+    $judul     = "User edit foto";
+    $ambil     = "mod_user/$p.php";
+} elseif ($p == "user_edit_pass") {
+    $nav     = "User";
+    $judul     = "User ganti password";
+    $ambil     = "mod_user/$p.php";
 } else {
     $nav     = "Dashboard";
     $judul     = "dashboard";
