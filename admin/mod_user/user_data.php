@@ -1,13 +1,3 @@
-<?php
-$query_hitung = mysqli_query($conn, "SELECT MAX(id_user) as id FROM user");
-$data_hitung = mysqli_fetch_array($query_hitung);
-$id_hitung = $data_hitung['id'];
-$urt = (int) substr($id_hitung, 3, 4);
-$urt++;
-$hrf = "US";
-$id_hitung = $hrf . sprintf("%03s", $urt);
-?>
-
 <h3 class="text-center" style="text-transform: capitalize;">data user</h3>
 <br>
 <a href="?p=user_tambah" class="btn btn-primary">Tambah Data</a>
@@ -41,7 +31,7 @@ $id_hitung = $hrf . sprintf("%03s", $urt);
                         <?= $no++ ?>
                     </td>
                     <td>
-                        <img src="../assets/img/avatar/<?= $data['foto'] ?>" alt="" width="50px" height="50px">
+                        <img src="../assets/img/avatar/<?= $data['foto'] ?>" alt="" width="70px" height="70px">
                     </td>
                     <td>
                         <?= $data['nm_user'] ?>

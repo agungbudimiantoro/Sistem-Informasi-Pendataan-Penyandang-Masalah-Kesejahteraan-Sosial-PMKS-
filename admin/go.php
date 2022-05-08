@@ -29,6 +29,23 @@ if ($p == "") {
     $nav     = "User";
     $judul     = "User ganti password";
     $ambil     = "mod_user/$p.php";
+} elseif ($p == "jenis_data") {
+    //jenis 
+    $nav     = "jenis";
+    $judul     = "jenis data";
+    $ambil     = "mod_jenis/$p.php";
+} elseif ($p == "jenis_tambah") {
+    $nav     = "jenis";
+    $judul     = "jenis tambah";
+    $ambil     = "mod_jenis/$p.php";
+} elseif ($p == "jenis_edit") {
+    $nav     = "jenis";
+    $judul     = "jenis edit";
+    $ambil     = "mod_jenis/$p.php";
+} elseif ($p == "jenis_proses") {
+    $nav     = "jenis";
+    $judul     = "jenis proses";
+    $ambil     = "mod_jenis/$p.php";
 } else {
     $nav     = "Dashboard";
     $judul     = "dashboard";
