@@ -16,13 +16,24 @@
        <?php include  "mod_subjek/subjeck/4/1.php"; ?>
        <?php include  "mod_subjek/subjeck/4/2.php"; ?>
        <!-- 5-->
-       <?php include  "mod_subjek/subjeck/5/1.php"; ?>
-       <?php include  "mod_subjek/subjeck/5/2.php"; ?>
-       <?php include  "mod_subjek/subjeck/5/3.php"; ?>
-
+       <?php include  "mod_subjek/subjeck/5/a/1.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/a/2.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/a/3.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/b/1.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/b/2.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/b/3.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/c/c1/1.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/c/c1/2.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/c/c1/3.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/c/c2/1.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/c/c2/2.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/c/c2/3.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/c/c2/4.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/d/1.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/d/2.php"; ?>
+       <?php include  "mod_subjek/subjeck/5/d/3.php"; ?>
        </div>
-       <button type="submit" name="add" class="btn btn-primary">tambah</button>
-       <a href="?p=user_data" class="btn btn-success">kembali</a>
+
        </div>
 
    </form>
