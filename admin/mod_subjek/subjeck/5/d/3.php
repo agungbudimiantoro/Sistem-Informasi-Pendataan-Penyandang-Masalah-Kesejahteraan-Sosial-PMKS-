@@ -2,8 +2,8 @@
     <table>
         <tr>
             <td colspan="2" class="border">
-                <p style="text-transform:capitalize;">apakah saudara/i mengkonsumsi NAPZA:</p>
-                <input type="text" class="mb-2" name="cr_brht" id="cr_brht" required>
+                <p style="text-transform:capitalize;">apakah alasan saudara/i mengkonsumsi NAPZA:</p>
+                <input type="text" class="mb-2" name="als_mks_npz" id="als_mks_npz" required>
             </td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="foto" class="form-label">foto</label></td>
             <td> <input type="file" name="foto" class="form-control" id="foto" aria-describedby="emailHelp" required></td>
