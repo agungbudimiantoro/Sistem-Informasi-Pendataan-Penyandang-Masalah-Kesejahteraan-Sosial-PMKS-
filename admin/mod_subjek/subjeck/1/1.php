@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td colspan="8">
-                <h5>1. Identitas Subjek</h5>
+                <h5 style="text-transform:uppercase;">I. Identitas Subjek</h5>
             </td>
         </tr>
         <tr>
@@ -56,6 +56,4 @@
             <td> <input type="text" name="btk_rmbt" class="form-control" id="btk_rmbt" aria-describedby="emailHelp" required></td>
         </tr>
     </table>
-
-
 </div>

@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td colspan="8">
-                <h5 style="text-transform:capitalize;">II. latar belakang keluarga</h5>
+                <h5 style="text-transform:uppercase;">II. latar belakang keluarga</h5>
             </td>
         </tr>
         <tr>
@@ -27,6 +27,4 @@
         </tr>
 
     </table>
-
-
 </div>
