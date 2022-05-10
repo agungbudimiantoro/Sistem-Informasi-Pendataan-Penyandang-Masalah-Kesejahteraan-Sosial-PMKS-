@@ -126,7 +126,6 @@ if (isset($_POST['add'])) {
   $nm_kms_npz = serialize(checkBox($_POST['nm_kms_npz']));
   $dpt_npz = serialize(checkBox($_POST['dpt_npz']));
 
-  $id_user = $_SESSION['id_user'];
 
 
   $query = ("INSERT into subjek(

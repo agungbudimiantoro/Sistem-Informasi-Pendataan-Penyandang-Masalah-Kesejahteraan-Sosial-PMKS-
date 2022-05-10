@@ -8,6 +8,8 @@ if ($_SESSION['level'] != 'admin') {
   header("location:../index.php?pesan=gagal10");
 }
 
+$id_user = $_SESSION['id_user'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
