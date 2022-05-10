@@ -13,6 +13,15 @@
                     <label style="text-transform:capitalize;" for="foto" class="form-label">foto</label>
                 </td>
             </tr>
+            <tr>
+
+                <td style="padding-top:20px;">
+                    <p style="text-transform:capitalize;" for="foto" class="form-label">foto</p>
+                    <small>jangan pilih foto untuk menggunakan foto lama</small>
+                    <input type="file" name="file" class="form-control" id="foto" aria-describedby="emailHelp">
+                </td>
+                </td>
+            </tr>
 
         </table>
     </div>
@@ -49,5 +58,8 @@
                 <td> <input type="time" value="<?= $data['jam'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>
 
             </tr>
+            <?php if ($p == 'subjek_edit') {
+                include "mod_subjek/subjeckViews/5/d/submit.php";
+            } ?>
         </table>
     </div>

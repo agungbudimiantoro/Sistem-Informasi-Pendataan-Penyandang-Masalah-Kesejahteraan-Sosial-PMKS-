@@ -3,6 +3,7 @@
         <tr>
             <td colspan="8">
                 <h5 style="text-transform:uppercase;">I. Identitas Subjek</h5>
+                <input value="<?= $data['id_subjek'] ?>" type="text" name="id" class="form-control" id="id" aria-describedby="emailHelp" required>
             </td>
         </tr>
         <tr>
@@ -64,7 +65,7 @@
                                                     echo "selected";
                                                 }; ?>>laki-laki</option>
                     <option value="perempuan" <?php if ($data['jk'] == 'perempuan') {
-                                                    echo "perempuan";
+                                                    echo "selected";
                                                 }; ?>>perempuan</option>
                 </select>
             </td>
