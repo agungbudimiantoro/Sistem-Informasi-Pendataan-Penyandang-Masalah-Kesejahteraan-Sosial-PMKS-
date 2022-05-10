@@ -9,6 +9,8 @@ if ($_SESSION['level'] != 'admin') {
 }
 
 $id_user = $_SESSION['id_user'];
+$username = $_SESSION['username'];
+$nm_user = $_SESSION['nm_user'];
 
 ?>
 <!DOCTYPE html>

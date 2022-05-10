@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="petugas" class="form-label">petugas</label></td>
-            <td> <input type="text" name="petugas" class="form-control" id="petugas" aria-describedby="emailHelp" required></td>
+            <td> <input type="text" name="petugas" value="<?= $nm_user ?>" class="form-control" id="petugas" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_penertipan" class="form-label">status penertipan</label></td>
             <td> <input type="text" name="sts_penertipan" class="form-control" id="sts_penertipan" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_tndk" class="form-label">status tindakan</label></td>

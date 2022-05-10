@@ -46,6 +46,7 @@ if (isset($_POST['add'])) {
   }
 
   // subjek
+  $id_user = $_SESSION['id_user'];
   $nm_lkp = $_POST['nm_lkp'];
   $tmpt_lahir = $_POST['tmpt_lahir'];
   $almt = $_POST['almt'];
@@ -104,12 +105,11 @@ if (isset($_POST['add'])) {
   $plprn_es =     $_POST['plprn_es'];
   $sts_jns_pmks =     $_POST['sts_jns_pmks'];
   $als_mks_npz =     $_POST['als_mks_npz'];
-  $petugas =     $_POST['petugas'];
   $sts_penertipan =     $_POST['sts_penertipan'];
   $sts_tndk =     $_POST['sts_tndk'];
   $tgl_pendataan =     $_POST['tgl_pendataan'];
   $jam =     $_POST['jam'];
-
+  $dpt_kkrs_fm = $_POST['dpt_kkrs_fm'];
   if ($btk_kgt1 != '') {
     $btk_kgt = $btk_kgt1;
   }
@@ -118,7 +118,6 @@ if (isset($_POST['add'])) {
   $btk_tdk = serialize(checkBox($_POST['btk_tdk']));
   $btk_kkrs_fm = serialize(checkBox($_POST['btk_kkrs_fm']));
   $proses_tdk = serialize(checkBox($_POST['proses_tdk']));
-  $dpt_kkrs_fm = serialize(checkBox($_POST['dpt_kkrs_fm']));
   $org_mlk_kkrs = serialize(checkBox($_POST['org_mlk_kkrs']));
   $org_mlk_kkrs_es = serialize(checkBox($_POST['org_mlk_kkrs_es']));
   $btk_kkrs_es = serialize(checkBox($_POST['btk_kkrs_es']));
@@ -180,7 +179,6 @@ if (isset($_POST['add'])) {
   dpt_npz,
   sts_jns_pmks,
   als_mks_npz,
-  nm_ptgs,
   sts_penertipan,
   sts_tndk,
   tgl_pendataan,
@@ -213,7 +211,6 @@ values
   '$dpt_npz',
   '$sts_jns_pmks',
   '$als_mks_npz',
-  '$petugas',
   '$sts_penertipan',
   '$sts_tndk',
   '$tgl_pendataan',

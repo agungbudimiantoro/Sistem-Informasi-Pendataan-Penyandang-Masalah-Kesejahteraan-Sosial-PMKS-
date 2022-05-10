@@ -21,6 +21,7 @@ if ($cek > 0) {
     $_SESSION['username'] = $username;
     $_SESSION['level'] = $data['level'];
     $_SESSION['id_user'] = $data['id_user'];
+    $_SESSION['nm_user'] = $data['nm_user'];
     if ($data['level'] == 'admin') {
       echo "
                 <script language=javascript>

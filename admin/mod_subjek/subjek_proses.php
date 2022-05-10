@@ -1,15 +1,7 @@
 <?php
 print("<pre>" . print_r($_POST, true) . "</pre>");
 
-function checkBox($nilai)
-{
-  $jumlah = count($nilai);
-  $alasan = array();
-  for ($i = 0; $i < $jumlah; $i++) {
-    $alasan[] = $nilai[$i];
-  }
-  return $alasan;
-}
+include "subjeck/fungsi.php";
 
 
 if (isset($_POST['add'])) {

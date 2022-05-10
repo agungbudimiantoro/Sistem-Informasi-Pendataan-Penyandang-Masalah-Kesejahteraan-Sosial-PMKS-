@@ -65,9 +65,9 @@
                         <?= $data['nm_ptgs'] ?>
                     </td>
                     <td>
-                        <a href="?p=subject_views&id=<?= $data['id_subject'] ?>" class="btn btn-primary">Views</a>
-                        <a href="?p=subject_edit&id=<?= $data['id_subject'] ?>" class="btn btn-warning">Ubah</a>
-                        <a href="?p=subject_proses_hapus&id=<?= $data['id_subject'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
+                        <a href="?p=subjek_views&id=<?= $data['id_subjek'] ?>" class="btn btn-primary">Views</a>
+                        <a href="?p=subjek_edit&id=<?= $data['id_subjek'] ?>" class="btn btn-warning">Ubah</a>
+                        <a href="?p=subjek_proses_hapus&id=<?= $data['id_subjek'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
                     </td>
                 </tr>
             <?php }; ?>
