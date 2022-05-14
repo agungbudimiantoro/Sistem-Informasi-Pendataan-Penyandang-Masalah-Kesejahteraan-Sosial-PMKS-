@@ -21,11 +21,11 @@ $result_als_pts_sklh = array_diff($als_pts_sklh, $array_als_pts_sklh);
             <input class="form-check-input" type="checkbox" <?php if ($result_als_pts_sklh != '') {
                                                                 foreach ($result_als_pts_sklh as $row) {
                                                                     if ($row != '') {
-                                                                        echo "checked";
+                                                                        echo " checked";
                                                                     }
                                                                 }
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="als_pts_sklh[]" id="inlineCheckbox1" value="lainnya">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="als_pts_sklh[]" id="inlineCheckbox1" value="">
             <label class="form-check-label" for="inlineCheckbox1">lainnya</label>
             <input type="text" name="als_pts_sklh[]" value="<?php if ($result_als_pts_sklh != '') {
                                                                 foreach ($result_als_pts_sklh as $row) {

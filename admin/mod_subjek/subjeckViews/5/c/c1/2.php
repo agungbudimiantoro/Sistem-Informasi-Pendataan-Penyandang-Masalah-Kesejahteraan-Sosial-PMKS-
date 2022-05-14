@@ -26,7 +26,7 @@ $result_btk_kkrs_fm = array_diff($btk_kkrs_fm, $array_btk_kkrs_fm);
                                                                     }
                                                                 }
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="btk_kkrs_fm[]" id="inlineCheckbox1" value="lainnya">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="btk_kkrs_fm[]" id="inlineCheckbox1" value="">
             <label class="form-check-label" for="inlineCheckbox1">lainnya</label>
             <input type="text" name="btk_kkrs_fm[]" value="<?php if ($result_btk_kkrs_fm != '') {
                                                                 foreach ($result_btk_kkrs_fm as $row) {

@@ -24,7 +24,7 @@ $result_pengobatan = array_diff($pengobatan, $array_pengobatan);
                                                                     }
                                                                 }
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="pengobatan[]" id="inlineCheckbox1" value="lainnya">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="pengobatan[]" id="inlineCheckbox1" value="">
             <label class="form-check-label" for="inlineCheckbox1">lainnya</label>
             <input type="text" name="pengobatan[]" value="<?php if ($result_pengobatan != '') {
                                                                 foreach ($result_pengobatan as $row) {

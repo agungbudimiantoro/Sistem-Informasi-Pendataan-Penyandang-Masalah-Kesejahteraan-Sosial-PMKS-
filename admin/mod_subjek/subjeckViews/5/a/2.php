@@ -24,7 +24,7 @@ $result_btk_tdk = array_diff($btk_tdk, $array_btk_tdk);
                                                                     }
                                                                 }
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="btk_tdk[]" id="inlineCheckbox1" value="lainnya">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="btk_tdk[]" id="inlineCheckbox1" value="">
             <label class="form-check-label" for="inlineCheckbox1">lainnya</label>
             <input type="text" name="btk_tdk[]" value="<?php if ($result_btk_tdk != '') {
                                                             foreach ($result_btk_tdk as $row) {

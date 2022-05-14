@@ -3,7 +3,7 @@
         <tr>
             <td colspan="8">
                 <h5 style="text-transform:uppercase;">I. Identitas Subjek</h5>
-                <input value="<?= $data['id_subjek'] ?>" hidden type="text" name="id" class="form-control" id="id" aria-describedby="emailHelp" required>
+                <input value="<?= $data['id_subjek'] ?>" hidden type="text" name="id_subjek" class="form-control" id="id" aria-describedby="emailHelp" required>
             </td>
         </tr>
         <tr>

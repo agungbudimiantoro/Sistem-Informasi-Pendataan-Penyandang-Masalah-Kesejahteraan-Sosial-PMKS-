@@ -48,19 +48,13 @@ if (isset($_POST['edit'])) {
   $sts_ayah = $_POST['sts_ayah'];
   $sts_ibu = $_POST['sts_ibu'];
   $trhir_ktm_klg = $_POST['trhir_ktm_klg'];
+  $trhir_ktm_klg1 = $_POST['trhir_ktm_klg1'];
   $sts_sklh = $_POST['sts_sklh'];
   $niat_ljt_sklh = $_POST['niat_ljt_sklh'];
   $als_pts_sklh = serialize(checkBox($_POST['als_pts_sklh']));
 
-  if ($aks_tbh1 != '') {
-    $aks_tbh = $aks_tbh1;
-  }
-  if ($cct_tbh1 != '') {
-    $cct_tbh = $cct_tbh1;
-  }
-  if ($bks_lk1 != '') {
-    $bks_lk = $bks_lk1;
-  }
+
+
 
   // subjek 2
 
@@ -81,8 +75,23 @@ if (isset($_POST['edit'])) {
   $tgl_pendataan =     $_POST['tgl_pendataan'];
   $jam =     $_POST['jam'];
   $dpt_kkrs_fm = $_POST['dpt_kkrs_fm'];
+  $petugas = $_POST['petugas'];
+
   if ($btk_kgt1 != '') {
     $btk_kgt = $btk_kgt1;
+  }
+  if ($aks_tbh1 != '') {
+    $aks_tbh = $aks_tbh1;
+  }
+  if ($cct_tbh1 != '') {
+    $cct_tbh = $cct_tbh1;
+  }
+  if ($bks_lk1 != '') {
+    $bks_lk = $bks_lk1;
+  }
+
+  if ($trhir_ktm_klg1 != '') {
+    $trhir_ktm_klg = $trhir_ktm_klg1;
   }
 
   $pengobatan = serialize(checkBox($_POST['pengobatan']));
@@ -226,6 +235,7 @@ if (isset($_POST['edit'])) {
   ,sts_tndk='" . $sts_tndk . "'
   ,tgl_pendataan='" . $tgl_pendataan . "'
   ,jam='" . $jam . "'
+  ,nm_ptgs='" . $petugas . "'
   WHERE id_subjek_kedua='" . $id . "'");
     }
 

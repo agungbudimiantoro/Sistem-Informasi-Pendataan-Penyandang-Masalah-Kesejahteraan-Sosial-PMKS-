@@ -24,7 +24,7 @@ $array_btk_kgt = array('mengamen', 'mengemis');
             <input class="form-check-input" type="radio" <?php if (!in_array($data['btk_kgt'], $array_btk_kgt)) {
                                                                 echo "checked";
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="btk_kgt" id="btk_kgt" value="lainnya">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="btk_kgt" id="btk_kgt" value="">
             <label class="form-check-label" style="text-transform:capitalize;" for="btk_kgt">lainnya</label>
             <input type="text" name="btk_kgt1" id="btk_kgt" value="<?php if (!in_array($data['btk_kgt'], $array_btk_kgt)) {
                                                                         echo $data['btk_kgt'];

@@ -8,7 +8,7 @@
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="foto" class="form-label">foto</label></td>
             <td> <input type="file" name="file" class="form-control" id="foto" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_jns_pmks" class="form-label">status jenis PMKS</label></td>
-            <td> <input type="text" name="sts_jns_pmks" class="form-control" id="sts_jns_pmks" aria-describedby="emailHelp" required></td>
+            <td> <input type="text" name="sts_jns_pmks" value="belum ditetapkan" readonly class="form-control" id="sts_jns_pmks" aria-describedby="emailHelp" required></td>
         </tr>
         <tr>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="petugas" class="form-label">petugas</label></td>

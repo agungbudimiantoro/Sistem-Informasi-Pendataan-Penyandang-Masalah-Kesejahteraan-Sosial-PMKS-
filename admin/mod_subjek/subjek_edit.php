@@ -1,5 +1,5 @@
    <h3 class="text-center text-capitalize mb-3">view Data subjek</h3>
-   <form action="?p=subjek_proses_edit" method="POST" target="_blank" enctype="multipart/form-data">
+   <form action="?p=subjek_proses_edit" method="POST" enctype="multipart/form-data">
        <?php
         $no = 1;
         $id = $_GET['id'];

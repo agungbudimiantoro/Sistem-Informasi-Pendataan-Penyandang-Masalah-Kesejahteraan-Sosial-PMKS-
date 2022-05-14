@@ -91,6 +91,10 @@ if (isset($_POST['add'])) {
     $bks_lk = $bks_lk1;
   }
 
+  if ($trhir_ktm_klg1 != '') {
+    $trhir_ktm_klg = $trhir_ktm_klg1;
+  }
+
   // subjek 2
 
   $rwt_pnykt =     $_POST['rwt_pnykt'];
@@ -110,6 +114,7 @@ if (isset($_POST['add'])) {
   $tgl_pendataan =     $_POST['tgl_pendataan'];
   $jam =     $_POST['jam'];
   $dpt_kkrs_fm = $_POST['dpt_kkrs_fm'];
+  $petugas = $_POST['petugas'];
   if ($btk_kgt1 != '') {
     $btk_kgt = $btk_kgt1;
   }
@@ -183,7 +188,8 @@ if (isset($_POST['add'])) {
   sts_tndk,
   tgl_pendataan,
   jam,
-  foto
+  foto,
+  nm_ptgs
 ) 
 values 
   (
@@ -215,7 +221,8 @@ values
   '$sts_tndk',
   '$tgl_pendataan',
   '$jam',
-  '$foto_baru'
+  '$foto_baru',
+  '$petugas'
   )");
     if (mysqli_query($conn, $query1)) {
 

@@ -1,4 +1,4 @@
-<h3 class="text-center" style="text-transform: capitalize;">data user</h3>
+<h3 class="text-center" style="text-transform: capitalize;">data jenis PMKS</h3>
 <div class="row">
     <label for="username" class="form-label">Tambah jenis PMKS</label>
     <div class="col-md-4">

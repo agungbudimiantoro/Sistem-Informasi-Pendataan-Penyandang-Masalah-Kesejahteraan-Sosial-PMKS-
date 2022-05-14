@@ -25,7 +25,7 @@ $result_org_mlk_kkrs = array_diff($org_mlk_kkrs, $array_org_mlk_kkrs);
                                                                     }
                                                                 }
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="org_mlk_kkrs[]" id="inlineCheckbox1" value="lainnya">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="org_mlk_kkrs[]" id="inlineCheckbox1" value="">
             <label class="form-check-label" for="inlineCheckbox1">lainnya</label>
             <input type="text" name="org_mlk_kkrs[]" value="<?php if ($result_org_mlk_kkrs != '') {
                                                                 foreach ($result_org_mlk_kkrs as $row) {

@@ -1,5 +1,5 @@
    <h3 class="text-center text-capitalize mb-3">input Data subjek</h3>
-   <form action="?p=subjek_proses_tambah" method="POST" target="_blank" enctype="multipart/form-data">
+   <form action="?p=subjek_proses_tambah" method="POST" enctype="multipart/form-data">
 
        <?php
         // 1

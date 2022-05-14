@@ -5,7 +5,7 @@ $result_proses_tdk = array_diff($proses_tdk, $array_proses_tdk);
 ?>
 <div class="row border">
     <div class="col-md-12 border">
-        <p style="text-transform:capitalize;">bila ada , apa bentuk-bentuk tindakan yang saudara/i lakukan:</p>
+        <p style="text-transform:capitalize;">tindakan yang dilakukan terhadap saudara/i yg pernah diproses secara hukum:</p>
         <?php for ($i = 0; $i < count($array_proses_tdk); $i++) : ?>
             <?php $data_for = $array_proses_tdk[$i]; ?>
             <div class="form-check form-check-inline">
@@ -24,7 +24,7 @@ $result_proses_tdk = array_diff($proses_tdk, $array_proses_tdk);
                                                                     }
                                                                 }
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="proses_tdk[]" id="inlineCheckbox1" value="lainnya">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="proses_tdk[]" id="inlineCheckbox1" value="">
             <label class="form-check-label" for="inlineCheckbox1">lainnya</label>
             <input type="text" name="proses_tdk[]" value="<?php if ($result_proses_tdk != '') {
                                                                 foreach ($result_proses_tdk as $row) {

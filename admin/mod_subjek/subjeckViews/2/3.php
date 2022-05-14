@@ -18,7 +18,7 @@ $array_trhir_ktm_klg = array('krng dari smnggu lalu', 'sbulan lalu', 'tiga bulan
             <input class="form-check-input" type="radio" <?php if (!in_array($data['trhir_ktm_klg'], $array_trhir_ktm_klg)) {
                                                                 echo "checked";
                                                             };
-                                                            fungsiDisabled($p, 'disabled'); ?> name="trhir_ktm_klg" id="trhir_ktm_klg" value="lainya, sbutkan kpan:">
+                                                            fungsiDisabled($p, 'disabled'); ?> name="trhir_ktm_klg" id="trhir_ktm_klg" value="">
             <label class="form-check-label" style="text-transform:capitalize;" for="trhir_ktm_klg">lainya, sbutkan kpan:</label>
             <input type="text" name="trhir_ktm_klg1" value="<?php if (!in_array($data['trhir_ktm_klg'], $array_trhir_ktm_klg)) {
                                                                 echo $data['trhir_ktm_klg'];

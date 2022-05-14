@@ -2,12 +2,6 @@
     <div class="col-md-4 border">
         <table>
             <tr>
-                <td colspan="2">
-                    <p style="text-transform:capitalize;">apakah alasan saudara/i mengkonsumsi NAPZA:</p>
-                    <input type="text" value="<?= $data['als_mks_npz'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> class="mb-2" name="als_mks_npz" id="als_mks_npz" required>
-                </td>
-            </tr>
-            <tr>
                 <td style="padding-top:20px;">
                     <img src="../assets/img/subjek/<?= $data['foto'] ?>" alt="" width="100px" height="100px">
                     <label style="text-transform:capitalize;" for="foto" class="form-label">foto</label>
@@ -45,21 +39,34 @@
             </tr>
             <tr>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_jns_pmks" class="form-label">status jenis PMKS</label></td>
-                <td> <input type="text" value="<?= $data['sts_jns_pmks'] ?>" readonly name="sts_jns_pmks" class="form-control" id="sts_jns_pmks" aria-describedby="emailHelp" required></td>
+                <td> <input type="text" value="<?= $data['sts_jns_pmks'] ?>" disabled name="sts_jns_pmks" class="form-control" id="sts_jns_pmks" aria-describedby="emailHelp" required></td>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="petugas" class="form-label">petugas</label></td>
                 <td> <input type="text" value="<?= $nm_user ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="petugas" class="form-control" id="petugas" aria-describedby="emailHelp" required></td>
 
             </tr>
             <tr>
 
-                <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="tgl_pendataan" class="form-label">tanggal</label></td>
-                <td> <input type="date" value="<?= $data['tgl_pendataan'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="tgl_pendataan" class="form-control" id="tgl_pendataan" aria-describedby="emailHelp" required></td>
-                <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="jam" class="form-label">jam</label></td>
-                <td> <input type="time" value="<?= $data['jam'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>
-
+                <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="faktor" class="form-label">faktor</label></td>
+                <td> <input type="text" name="faktor" class="form-control" id="faktor" aria-describedby="emailHelp" required></td>
+                <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="id_jns_pmks" class="form-label">tanggal</label></td>
+                <td> <input type="date" name="tgl" class="form-control" id="tgl" aria-describedby="emailHelp" required></td>
             </tr>
-            <?php if ($p == 'subjek_edit') {
-                include "mod_subjek/subjeckViews/5/d/submit.php";
-            } ?>
+            <tr>
+                <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="id_jns_pmks" class="form-label">jenis pmks</label></td>
+                <td>
+                    <select class="form-select" aria-label="Default select example" name="id_jns_pmks" required>
+                        <option value="" diasabled selected>pilih jenis pmks</option>
+                        <?php
+                        $query_jenis_pmks = mysqli_query($conn, 'SELECT * FROM jns_pmks');
+                        while ($data_jenis_pmks = mysqli_fetch_assoc($query_jenis_pmks)) {
+                        ?>
+                            <option value="<?= $data_jenis_pmks['id_jns_pmks'] ?>"><?= $data_jenis_pmks['jns_pmks'] ?></option>
+                        <?php } ?>
+                    </select>
+                </td>
+                <td colspan="4" align="right"> <button type="submit" name="add" class="btn btn-primary">simpan</button>
+                    <button onclick="history.back()" class="btn btn-success">Kembali</button>
+                </td>
+            </tr>
         </table>
     </div>
