@@ -59,7 +59,7 @@
 
             </tr>
             <?php if ($p == 'subjek_edit') {
-                include "mod_subjek/subjeckViews/5/d/submit.php";
+                include "mod_subjek/subjekEdit/5/d/submit.php";
             } ?>
         </table>
     </div>

@@ -1,8 +1,9 @@
-   <h3 class="text-center text-capitalize mb-3">input Data pmks</h3>
+   <h3 class="text-center text-capitalize mb-3">edit Data pmks</h3>
    <form action="?p=pmks_proses" method="POST" enctype="multipart/form-data">
        <?php
         $no = 1;
-        $query = mysqli_query($conn, "SELECT subjek.*, subjek_kedua.* FROM subjek, subjek_kedua where subjek.id_subjek = subjek_kedua.id_subjek and subjek_kedua.sts_jns_pmks='belum ditetapkan'");
+        $id_dt_pmks = $_GET['id'];
+        $query = mysqli_query($conn, "SELECT * FROM dt_pmks, subjek, subjek_kedua where subjek.id_subjek = dt_pmks.id_subjek and subjek_kedua.id_subjek_kedua = dt_pmks.id_subjek_kedua and dt_pmks.id_dt_pmks = '$id_dt_pmks'");
         $data = mysqli_fetch_assoc($query);
 
         // 1

@@ -35,10 +35,15 @@ if (isset($_POST['add'])) {
 // edit data
 if (isset($_POST['edit'])) {
 
+  $id_jns_pmks       = htmlspecialchars($_POST['id_jns_pmks']);
   $id       = htmlspecialchars($_POST['id']);
-  $jns_pmks       = htmlspecialchars($_POST['jns_pmks']);
+  $faktor       = htmlspecialchars($_POST['faktor']);
+  $tgl       = htmlspecialchars($_POST['tgl']);
 
-  $query = ("UPDATE jns_pmks SET jns_pmks='" . $jns_pmks . "' WHERE id_jns_pmks='" . $id . "'");
+  $query = ("UPDATE dt_pmks SET id_jns_pmks='$id_jns_pmks', 
+  faktor='$faktor', 
+  tgl='$tgl'
+  WHERE id_dt_pmks='" . $id . "'");
 
   if (mysqli_query($conn, $query)) {
 
@@ -65,7 +70,7 @@ if (isset($_POST['edit'])) {
 //if (isset($_POST['del'])) {
 // hapus data
 $id    = htmlspecialchars($_GET['id']);
-$query = ("DELETE from jns_pmks where id_jns_pmks='" . $id . "'");
+$query = ("DELETE from dt_pmks where id_dt_pmks='" . $id . "'");
 if (mysqli_query($conn, $query)) {
   echo "
         <script language=javascript>
