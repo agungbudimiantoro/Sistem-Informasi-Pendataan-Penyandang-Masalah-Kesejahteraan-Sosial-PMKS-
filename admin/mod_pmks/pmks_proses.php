@@ -15,7 +15,8 @@ if (isset($_POST['add'])) {
 
   $query = ("INSERT into dt_pmks values('','$id_user','$id_jns_pmks','$id_subjek','$id_subjek','$faktor','$tgl')");
   if (mysqli_query($conn, $query)) {
-
+    $query = mysqli_query($conn, "UPDATE subjek_kedua SET sts_jns_pmks='sudah ditetapkan'
+  WHERE id_subjek_kedua='" . $id_subjek . "'");
     echo "
     <script language=javascript>
       alert('Data Baru Berhasil Ditambah');

@@ -7,7 +7,7 @@
             <div class="mb-3">
                 <label style="text-transform:capitalize;" for="nama_user" class="form-label">cetak berdasarkan jenis pmks</label>
 
-                <select class="form-select" aria-label="Default select example" name="id_jns_pmks" required>
+                <select class="form-select" aria-label="Default select example" name="id_jns_pmks">
                     <option value="" diasabled selected>-- pilih jenis pmks --</option>
                     <?php
 
@@ -23,13 +23,13 @@
         <div class="col-md-4">
             <div class="mb-3">
                 <label style="text-transform:capitalize;" for="nama_user" class="form-label">dari tanggal</label>
-                <input type="date" name="dari" class="form-control" id="nama_user" aria-describedby="emailHelp" required>
+                <input type="date" name="dari" class="form-control" id="nama_user" aria-describedby="emailHelp">
             </div>
         </div>
         <div class="col-md-4">
             <div class="mb-3">
                 <label style="text-transform:capitalize;" for="nama_user" class="form-label">sampai tanggal</label>
-                <input type="date" name="sampai" class="form-control" id="nama_user" aria-describedby="emailHelp" required>
+                <input type="date" name="sampai" class="form-control" id="nama_user" aria-describedby="emailHelp">
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
         <div class="col-md-4">
             <div class="mb-3">
                 <label style="text-transform:capitalize;" for="nama_user" class="form-label">kecamatan</label>
-                <select class="form-select" aria-label="Default select example" name="kecamatan" required>
+                <select class="form-select" aria-label="Default select example" name="kecamatan">
                     <option value="" diasabled selected>-- pilih kecamatan --</option>
                     <option value="lubuklinggau barat 1">lubuklinggau barat 1</option>
                     <option value="lubuklinggau barat 2">lubuklinggau barat 2</option>

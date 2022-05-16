@@ -51,9 +51,7 @@
                                                     echo $data['faktor'];
                                                 } ?>" name="faktor" class="form-control" id="faktor" aria-describedby="emailHelp" required></td>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="id_jns_pmks" class="form-label">tanggal</label></td>
-                <td> <input type="date" name="tgl" value="<?php if (isset($data['tgl'])) {
-                                                                echo $data['tgl'];
-                                                            } ?>" class="form-control" id="tgl" aria-describedby="emailHelp" required></td>
+                <td> <input type="date" name="tgl" value="<?= date("Y-m-d") ?>" readonly class="form-control" id="tgl" aria-describedby="emailHelp" required></td>
             </tr>
             <tr>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="id_jns_pmks" class="form-label">jenis pmks</label></td>
@@ -77,7 +75,7 @@
                         <?php } ?>
                     </select>
                 </td>
-                <?php if (isset($_GET['id'])) : ?>
+                <?php if (isset($_GET['edit'])) : ?>
                     <td colspan="4" align="right"> <button type="submit" name="edit" class="btn btn-primary">edit</button>
                     <?php else : ?>
                     <td colspan="4" align="right"> <button type="submit" name="add" class="btn btn-primary">simpan</button>

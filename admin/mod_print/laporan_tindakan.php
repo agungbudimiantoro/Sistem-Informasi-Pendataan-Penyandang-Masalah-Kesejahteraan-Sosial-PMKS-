@@ -58,12 +58,15 @@
                     <?php
                     include "../../koneksi.php";
                     $no = 1;
-                    $id_jns_pmks = $_POST['id_jns_pmks'];
-                    $dari = $_POST['dari'];
-                    $sampai = $_POST['sampai'];
-
-                    $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, tindakan where tindakan.id_subjek_kedua = subjek_kedua.id_subjek_kedua and subjek.id_subjek = tindakan.id_subjek
-            and tindakan.tgl >= '$dari' and tindakan.tgl <= '$sampai' and tindakan.id_jns_pmks='$id_jns_pmks'");
+                    if ($_POST['dari'] != null) {
+                        $id_jns_pmks = $_POST['id_jns_pmks'];
+                        $dari = $_POST['dari'];
+                        $sampai = $_POST['sampai'];
+                        $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, tindakan where tindakan.id_subjek_kedua = subjek_kedua.id_subjek_kedua and subjek.id_subjek = tindakan.id_subjek
+                        and tindakan.tgl >= '$dari' and tindakan.tgl <= '$sampai' and tindakan.id_jns_pmks='$id_jns_pmks'");
+                    } else {
+                        $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, tindakan where tindakan.id_subjek_kedua = subjek_kedua.id_subjek_kedua and subjek.id_subjek = tindakan.id_subjek");
+                    }
                     while ($data = mysqli_fetch_assoc($query)) {
                     ?><tr>
                             <td>
@@ -133,14 +136,15 @@
                                 <a href="?p=tindakan_proses&id=<?= $data['id_tindakan'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
                             </td>
                         </tr>
-                        <tr>
-                            <?php
-                            $num = mysqli_num_rows($query);
-                            ?>
-                            <td colspan="2">jumlah data</td>
-                            <td colspan="12"><?= $num ?></td>
-                        </tr>
                     <?php }; ?>
+                    <tr>
+                        <?php
+                        $num = mysqli_num_rows($query);
+                        ?>
+                        <td colspan="2">jumlah data</td>
+                        <td colspan="12"><?= $num ?></td>
+                    </tr>
+
                 </tbody>
             </table>
         </div>
@@ -156,7 +160,11 @@
                     <br>
                     <br>
                     <br>
-                    <p class="text-center"><small>(Nama Kepala Dinas Sosial)</small></p>
+                    <?php
+                    $query = mysqli_query($conn, "SELECT * FROM user where jbtn='kepala dinas'");
+                    $kepala_dinas = mysqli_fetch_assoc($query);
+                    ?>
+                    <p class="text-center"><small>( <?= $kepala_dinas['nm_user'] ?> )</small></p>
                 </td>
             </tr>
         </table>

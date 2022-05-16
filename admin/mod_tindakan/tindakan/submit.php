@@ -101,9 +101,7 @@
             </tr>
             <tr>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="tanggal" class="form-label">tanggal</label></td>
-                <td> <input type="date" name="tgl" value="<?php if (isset($data['tgl'])) {
-                                                                echo $data['tgl'];
-                                                            } ?>" class="form-control" id="tanggal" aria-describedby="emailHelp" required></td>
+                <td> <input type="date" name="tgl" value="<?= date("Y-m-d") ?>" readonly class="form-control" id="tanggal" aria-describedby="emailHelp" required></td>
                 <?php if (isset($_GET['edit'])) : ?>
                     <td colspan="4" align="right"> <button type="submit" name="edit" class="btn btn-primary">edit</button>
                     <?php else : ?>

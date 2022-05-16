@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="petugas" class="form-label">petugas</label></td>
-            <td> <input type="text" name="petugas" value="<?= $nm_user ?>" class="form-control" id="petugas" aria-describedby="emailHelp" required></td>
+            <td> <input type="text" name="petugas" value="<?= $nm_user ?>" readonly class="form-control" id="petugas" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_penertipan" class="form-label">status penertipan</label></td>
             <td> <input type="text" name="sts_penertipan" class="form-control" id="sts_penertipan" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_tndk" class="form-label">status tindakan</label></td>
@@ -26,7 +26,6 @@
         </tr>
         <tr>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="tgl_pendataan" class="form-label">tanggal</label></td>
-            <td> <input type="date" name="tgl_pendataan" class="form-control" id="tgl_pendataan" aria-describedby="emailHelp" required></td>
+            <td> <input type="date" name="tgl_pendataan" value="<?= date("Y-m-d") ?>" readonly class=" form-control" id="tgl_pendataan" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="jam" class="form-label">jam</label></td>
-            <td> <input type="time" value="<?php $date = date("H:i");
-                                            echo "$date"; ?>" name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>
+            <td> <input type="time" value="<?= date("H:i") ?>" readonly name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>

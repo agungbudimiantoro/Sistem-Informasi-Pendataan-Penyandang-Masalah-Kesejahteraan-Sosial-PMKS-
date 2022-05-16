@@ -75,7 +75,7 @@
                     </td>
                     <td>
 
-                        <a href="?p=pmks_edit&id=<?= $data['id_dt_pmks'] ?>" class="btn btn-warning">Ubah</a>
+                        <a href="?p=pmks_edit&id=<?= $data['id_dt_pmks'] ?>&edit" class="btn btn-warning">Ubah</a>
                         <a href="?p=pmks_proses&id=<?= $data['id_dt_pmks'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
                     </td>
                 </tr>

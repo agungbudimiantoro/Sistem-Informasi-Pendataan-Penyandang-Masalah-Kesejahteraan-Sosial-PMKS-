@@ -102,7 +102,11 @@
                     <br>
                     <br>
                     <br>
-                    <p class="text-center"><small>(Nama Kepala Dinas Sosial)</small></p>
+                    <?php
+                    $query = mysqli_query($conn, "SELECT * FROM user where jbtn='kepala dinas'");
+                    $kepala_dinas = mysqli_fetch_assoc($query);
+                    ?>
+                    <p class="text-center"><small>( <?= $kepala_dinas['nm_user'] ?> )</small></p>
                 </td>
             </tr>
         </table>
