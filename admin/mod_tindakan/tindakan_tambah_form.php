@@ -1,9 +1,11 @@
-   <h3 class="text-center text-capitalize mb-3">input Data pmks</h3>
-   <form action="?p=pmks_proses" method="POST" enctype="multipart/form-data">
+   <h3 class="text-center text-capitalize mb-3">input Data tindakan</h3>
+   <form action="?p=tindakan_proses" method="POST" enctype="multipart/form-data">
        <?php
         $no = 1;
         $id = $_GET['id'];
-        $query = mysqli_query($conn, "SELECT subjek.*, subjek_kedua.* FROM subjek, subjek_kedua where subjek.id_subjek = subjek_kedua.id_subjek and subjek.id_subjek = '$id' ");
+
+        $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, dt_pmks where subjek.id_subjek = subjek_kedua.id_subjek and subjek.id_subjek = dt_pmks.id_subjek
+        and subjek.id_subjek='$id'");
         $data = mysqli_fetch_assoc($query);
 
         // 1
@@ -27,7 +29,7 @@
         include  "mod_subjek/subjekViews/5/c/c2/2.php";
         include  "mod_subjek/subjekViews/5/d/1.php";
         //submit
-        include  "mod_pmks/pmks/submit.php";
+        include  "mod_tindakan/tindakan/submit.php";
         // // end
 
         ?>

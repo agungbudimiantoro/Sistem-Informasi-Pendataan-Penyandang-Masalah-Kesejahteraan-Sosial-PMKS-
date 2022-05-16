@@ -1,6 +1,6 @@
-<h3 class="text-center" style="text-transform: capitalize;">data pmks</h3>
+<h3 class="text-center" style="text-transform: capitalize;">data tindakan</h3>
 <br>
-<a href="?p=pmks_tambah" class="btn btn-primary">Tambah Data</a>
+<a href="?p=tindakan_tambah" class="btn btn-primary">Tambah Data</a>
 <br>
 <br>
 <div class="">
@@ -9,15 +9,19 @@
             <tr>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">foto</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm lkp</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nik</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jk</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl lahir</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">umur</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">almt</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm_ayah</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm_ibu</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm ayah</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm ibu</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">faktor</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jns pmks</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">pntn tigl</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ket</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tdk</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm_ptgs</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
@@ -26,7 +30,8 @@
         <tbody>
             <?php
             $no = 1;
-            $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, dt_pmks where subjek.id_subjek = subjek_kedua.id_subjek and subjek.id_subjek = dt_pmks.id_subjek");
+            $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, tindakan where tindakan.id_subjek_kedua = subjek_kedua.id_subjek_kedua and subjek.id_subjek = tindakan.id_subjek");
+
             while ($data = mysqli_fetch_assoc($query)) {
             ?><tr>
                     <td>
@@ -37,6 +42,9 @@
                     </td>
                     <td>
                         <?= $data['nm_lkp'] ?>
+                    </td>
+                    <td>
+                        <?= $data['nik'] ?>
                     </td>
                     <td>
                         <?= $data['jk'] ?>
@@ -56,8 +64,13 @@
                     <td>
                         <?= $data['nm_ibu'] ?>
                     </td>
+                    <?php
+                    $id_dt_pmks = $data['id_dt_pmks'];
+                    $query1 = mysqli_query($conn, "SELECT * FROM dt_pmks where id_dt_pmks='$id_dt_pmks'");
+                    $data1 = mysqli_fetch_assoc($query1);
+                    ?>
                     <td>
-                        <?= $data['faktor'] ?>
+                        <?= $data1['faktor'] ?>
                     </td>
                     <?php
                     $id_jns_pmks = $data['id_jns_pmks'];
@@ -68,15 +81,24 @@
                         <?= $data1['jns_pmks'] ?>
                     </td>
                     <td>
+                        <?= $data['pnpt_tgl'] ?>
+                    </td>
+                    <td>
+                        <?= $data['ket'] ?>
+                    </td>
+                    <td>
+                        <?= $data['tindakan'] ?>
+                    </td>
+
+                    <td>
                         <?= $data['tgl'] ?>
                     </td>
                     <td>
                         <?= $data['nm_ptgs'] ?>
                     </td>
                     <td>
-
-                        <a href="?p=pmks_edit&id=<?= $data['id_dt_pmks'] ?>" class="btn btn-warning">Ubah</a>
-                        <a href="?p=pmks_proses&id=<?= $data['id_dt_pmks'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
+                        <a href="?p=tindakan_edit&id=<?= $data['id_tindakan'] ?>&edit" class="btn btn-warning">Ubah</a>
+                        <a href="?p=tindakan_proses&id=<?= $data['id_tindakan'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
                     </td>
                 </tr>
             <?php }; ?>

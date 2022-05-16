@@ -100,6 +100,27 @@ if ($p == "") {
     $nav     = "pmks";
     $judul     = "pmks proses";
     $ambil     = "mod_pmks/$p.php";
+} elseif ($p == "tindakan_data") {
+    //tindakan 
+    $nav     = "tindakan";
+    $judul     = "tindakan data";
+    $ambil     = "mod_tindakan/$p.php";
+} elseif ($p == "tindakan_tambah") {
+    $nav     = "tindakan";
+    $judul     = "tindakan tambah";
+    $ambil     = "mod_tindakan/$p.php";
+} elseif ($p == "tindakan_tambah_form") {
+    $nav     = "tindakan";
+    $judul     = "tindakan tambah";
+    $ambil     = "mod_tindakan/$p.php";
+} elseif ($p == "tindakan_edit") {
+    $nav     = "tindakan";
+    $judul     = "tindakan edit";
+    $ambil     = "mod_tindakan/$p.php";
+} elseif ($p == "tindakan_proses") {
+    $nav     = "tindakan";
+    $judul     = "tindakan proses";
+    $ambil     = "mod_tindakan/$p.php";
 } else {
     $nav     = "Dashboard";
     $judul     = "dashboard";

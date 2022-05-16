@@ -1,15 +1,14 @@
 <h3 class="text-center" style="text-transform: capitalize;">data pmks</h3>
 <br>
-<a href="?p=pmks_tambah" class="btn btn-primary">Tambah Data</a>
+
 <br>
-<br>
-<div class="">
+<div class="mr-3">
     <table class="table align-items-center mb-0 display" id="table_id">
         <thead>
             <tr>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">foto</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm lkp</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jk</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl lahir</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">umur</th>
@@ -26,7 +25,8 @@
         <tbody>
             <?php
             $no = 1;
-            $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, dt_pmks where subjek.id_subjek = subjek_kedua.id_subjek and subjek.id_subjek = dt_pmks.id_subjek");
+            $query = mysqli_query($conn, "SELECT * FROM subjek, subjek_kedua, dt_pmks where dt_pmks.id_subjek = subjek.id_subjek and subjek_kedua.id_subjek_kedua = dt_pmks.id_subjek_kedua
+            and subjek_kedua.sts_tndk='tindak lanjuti'");
             while ($data = mysqli_fetch_assoc($query)) {
             ?><tr>
                     <td>
@@ -56,8 +56,13 @@
                     <td>
                         <?= $data['nm_ibu'] ?>
                     </td>
+                    <?php
+                    $id_dt_pmks = $data['id_dt_pmks'];
+                    $query1 = mysqli_query($conn, "SELECT * FROM dt_pmks where id_dt_pmks='$id_dt_pmks'");
+                    $data1 = mysqli_fetch_assoc($query1);
+                    ?>
                     <td>
-                        <?= $data['faktor'] ?>
+                        <?= $data1['faktor'] ?>
                     </td>
                     <?php
                     $id_jns_pmks = $data['id_jns_pmks'];
@@ -74,9 +79,7 @@
                         <?= $data['nm_ptgs'] ?>
                     </td>
                     <td>
-
-                        <a href="?p=pmks_edit&id=<?= $data['id_dt_pmks'] ?>" class="btn btn-warning">Ubah</a>
-                        <a href="?p=pmks_proses&id=<?= $data['id_dt_pmks'] ?>" onclick="return confirm('anda yakin ingin menghapus data?')" class="btn btn-danger">Hapus</a>
+                        <a href="?p=tindakan_tambah_form&id=<?= $data['id_subjek'] ?>" class="btn btn-primary">Proses</a>
                     </td>
                 </tr>
             <?php }; ?>

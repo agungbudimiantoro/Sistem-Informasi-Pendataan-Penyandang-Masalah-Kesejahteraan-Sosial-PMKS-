@@ -26,7 +26,8 @@
         include  "mod_subjek/subjekViews/5/c/c2/1.php";
         include  "mod_subjek/subjekViews/5/c/c2/2.php";
         include  "mod_subjek/subjekViews/5/d/1.php";
-        include  "mod_subjek/subjekViews/5/d/2.php";
+        //submit
+        include  "mod_pmks/pmks/submit.php";
         // // end
 
         ?>
