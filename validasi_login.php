@@ -22,16 +22,17 @@ if ($cek > 0) {
     $_SESSION['level'] = $data['level'];
     $_SESSION['id_user'] = $data['id_user'];
     $_SESSION['nm_user'] = $data['nm_user'];
+    $nm_user =  $data['nm_user'];
     if ($data['level'] == 'admin') {
       echo "
                 <script language=javascript>
-                  alert('Selamat Datang $username');
+                  alert('Selamat Datang $nm_user');
                   document.location.href='admin/hal.php?p=dashboard';
                 </script>";
     } elseif ($data['level'] == 'pimpinan') {
       echo "
                     <script language=javascript>
-                      alert('Selamat Datang $username');
+                      alert('Selamat Datang $nm_user');
                       document.location.href='pimpinan/hal.php?p=dashboard';
                     </script>";
     }

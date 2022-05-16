@@ -121,6 +121,19 @@ if ($p == "") {
     $nav     = "tindakan";
     $judul     = "tindakan proses";
     $ambil     = "mod_tindakan/$p.php";
+} elseif ($p == "laporan_user") {
+    //laporan
+    $nav     = "laporan";
+    $judul     = "laporan proses";
+    $ambil     = "mod_laporan/$p.php";
+} elseif ($p == "laporan_pmks") {
+    $nav     = "laporan";
+    $judul     = "laporan proses";
+    $ambil     = "mod_laporan/$p.php";
+} elseif ($p == "laporan_tindakan") {
+    $nav     = "laporan";
+    $judul     = "laporan proses";
+    $ambil     = "mod_laporan/$p.php";
 } else {
     $nav     = "Dashboard";
     $judul     = "dashboard";

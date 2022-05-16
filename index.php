@@ -26,7 +26,7 @@
   <!-- end of navbar -->
   <div class="container mt-5 mb-5" style="min-height: 480px;">
     <div class="row border p-2">
-      <h3 class="text-center">Sistem Informasi Pendataan Penyandang Masalah Kesejahteraan</h3>
+      <h3 class="text-center">Sistem Informasi Pendataan Penyandang Masalah</h3>
       <h3 class="text-center">Kesejahteraan Sosial (PMKS) pada Dinas Sosial</h3>
       <h3 class="text-center">Kota Lubuklinggau</h3>
       <br>

@@ -55,7 +55,8 @@
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="tgl_pendataan" class="form-label">tanggal</label></td>
                 <td> <input type="date" value="<?= $data['tgl_pendataan'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="tgl_pendataan" class="form-control" id="tgl_pendataan" aria-describedby="emailHelp" required></td>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="jam" class="form-label">jam</label></td>
-                <td> <input type="time" value="<?= $data['jam'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>
+                <td> <input type="time" value="<?php $date = date("H:i");
+                                                echo "$date"; ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>
 
             </tr>
             <?php if ($p == 'subjek_edit') {

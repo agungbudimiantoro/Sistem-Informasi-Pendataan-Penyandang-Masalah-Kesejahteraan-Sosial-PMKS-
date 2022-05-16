@@ -40,9 +40,9 @@
                                 &nbsp &nbsp &nbsp Laporan Data
                             </a>
                             <ul class="dropdown-menu dropdown-menu-light">
-                                <li><a class="dropdown-item" href="">Laporan Data User</a></li>
-                                <li><a class="dropdown-item" href="">Laporan Data PMKS</a></li>
-                                <li><a class="dropdown-item" href="">Laporan Data Tindakan</a></li>
+                                <li><a class="dropdown-item" href="?p=laporan_user">Laporan Data User</a></li>
+                                <li><a class="dropdown-item" href="?p=laporan_pmks">Laporan Data PMKS</a></li>
+                                <li><a class="dropdown-item" href="?p=laporan_tindakan">Laporan Data Tindakan</a></li>
                             </ul>
                         </li>
                     </ul>

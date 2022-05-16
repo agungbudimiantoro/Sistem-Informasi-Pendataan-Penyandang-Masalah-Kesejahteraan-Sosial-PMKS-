@@ -28,4 +28,5 @@
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="tgl_pendataan" class="form-label">tanggal</label></td>
             <td> <input type="date" name="tgl_pendataan" class="form-control" id="tgl_pendataan" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="jam" class="form-label">jam</label></td>
-            <td> <input type="time" name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>
+            <td> <input type="time" value="<?php $date = date("H:i");
+                                            echo "$date"; ?>" name="jam" class="form-control" id="jam" aria-describedby="emailHelp" required></td>
