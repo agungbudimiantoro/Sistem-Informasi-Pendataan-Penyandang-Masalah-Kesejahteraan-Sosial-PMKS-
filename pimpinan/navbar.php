@@ -6,7 +6,9 @@
                 <li class="nav-item">
                     <h3 class="nav-link active" aria-current="page">Halaman Pimpinan</h3>
                 </li>
-
+                <li class="nav-item">
+                    <h4 class="nav-link active" aria-current="page"><?= $nm_user ?></h4>
+                </li>
             </ul>
 
         </div>

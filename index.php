@@ -32,8 +32,10 @@
       <br>
       <br>
       <br>
+      <div class="d-flex justify-content-center">
+        <img src="assets/img/logo/logo.png" width="100px" height="100px" alt="">
+      </div>
       <h3 class="text-center">Login</h3>
-      <!-- <img src="assets/img/logo/logo.svg" width="100px" height="100px" alt=""> -->
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <p class=""> <?php

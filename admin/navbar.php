@@ -4,12 +4,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <h3 class="nav-link active" aria-current="page">Halaman Admin</h3>
+                    <h3 class="nav-link active" aria-current="page">Halaman Admin | </h3>
                 </li>
-
+                <li class="nav-item">
+                    <h4 class="nav-link active" aria-current="page"><?= $nm_user ?></h4>
+                </li>
             </ul>
 
         </div>
+
     </div>
 </nav>
 
@@ -52,8 +55,8 @@
                                 &nbsp &nbsp &nbsp Rekapitulasi Data
                             </a>
                             <ul class="dropdown-menu dropdown-menu-light">
-                                <li><a class="dropdown-item" href="">Grafik Batang Data PMKS</a></li>
-                                <li><a class="dropdown-item" href="">Dashboard Data Faktor</a></li>
+                                <li><a class="dropdown-item" href="?p=grafik_pmks">Grafik Batang Data PMKS</a></li>
+                                <li><a class="dropdown-item" href="?p=dashboard_faktor">Dashboard Data Faktor</a></li>
                             </ul>
                         </li>
                     </ul>

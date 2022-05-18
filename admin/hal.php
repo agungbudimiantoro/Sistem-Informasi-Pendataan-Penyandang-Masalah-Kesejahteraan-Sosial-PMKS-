@@ -50,6 +50,16 @@ $nm_user = $_SESSION['nm_user'];
     });
     $('.dropdown-toggle').dropdown();
   </script>
+  <?php if ($p == 'grafik_pmks') {
+    include "data/grafik_pmks.php";
+  } elseif ($p == 'dashboard_faktor') {
+    include "data/dashboard_faktor.php";
+  } else {
+    include "data/grafik_pmks.php";
+  }
+  ?>
+  <?php //include '../assets/chart.js/path.php'; 
+  ?>
 </body>
 
 </html>

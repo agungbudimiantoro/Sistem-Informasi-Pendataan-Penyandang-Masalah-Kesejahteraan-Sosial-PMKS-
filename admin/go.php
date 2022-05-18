@@ -134,6 +134,16 @@ if ($p == "") {
     $nav     = "laporan";
     $judul     = "laporan proses";
     $ambil     = "mod_laporan/$p.php";
+} elseif ($p == "grafik_pmks") {
+    //grafik
+    $nav     = "grafik";
+    $judul     = "grafik pmks";
+    $ambil     = "grafik/$p.php";
+} elseif ($p == "dashboard_faktor") {
+    //grafik
+    $nav     = "dashboard";
+    $judul     = "dashboard pmks";
+    $ambil     = "grafik/$p.php";
 } else {
     $nav     = "Dashboard";
     $judul     = "dashboard";
