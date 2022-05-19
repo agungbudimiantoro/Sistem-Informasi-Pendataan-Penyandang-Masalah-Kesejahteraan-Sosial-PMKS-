@@ -23,20 +23,22 @@
             <header class="d-flex justify-content-center py-3">
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a href="?p=dashboard" class="nav-link" aria-current="page">Home &nbsp &nbsp &nbsp</a></li>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-primary" href="#" data-bs-toggle="dropdown">
-                                Data
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-light">
-                                <li><a class="dropdown-item" href="?p=user_data">Data User</a></li>
-                                <li><a class="dropdown-item" href="?p=jenis_data">Data Jenis PMKS</a></li>
-                                <li><a class="dropdown-item" href="?p=subjek_data">Data Subject</a></li>
-                                <li><a class="dropdown-item" href="?p=pmks_data">Data PMKS</a></li>
-                                <li><a class="dropdown-item" href="?p=tindakan_data">Data Tindakan</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <?php if ($level == 'admin') : ?>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-primary" href="#" data-bs-toggle="dropdown">
+                                    Data
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-light">
+                                    <li><a class="dropdown-item" href="?p=user_data">Data User</a></li>
+                                    <li><a class="dropdown-item" href="?p=jenis_data">Data Jenis PMKS</a></li>
+                                    <li><a class="dropdown-item" href="?p=subjek_data">Data Subject</a></li>
+                                    <li><a class="dropdown-item" href="?p=pmks_data">Data PMKS</a></li>
+                                    <li><a class="dropdown-item" href="?p=tindakan_data">Data Tindakan</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <?php endif; ?>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-primary" href="#" data-bs-toggle="dropdown">

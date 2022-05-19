@@ -4,14 +4,12 @@ session_start();
 if (!$_SESSION['id_user']) {
   header("location:../index.php?pesan=gagal10");
 }
-if ($_SESSION['level'] != 'admin') {
-  header("location:../index.php?pesan=gagal10");
-}
+
 
 $id_user = $_SESSION['id_user'];
 $username = $_SESSION['username'];
 $nm_user = $_SESSION['nm_user'];
-
+$level = $_SESSION['level'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +56,7 @@ $nm_user = $_SESSION['nm_user'];
     include "data/grafik_pmks.php";
   }
   ?>
-  <?php //include '../assets/chart.js/path.php'; 
+  <?php // include '../assets/chart.js/path.php'; 
   ?>
 </body>
 
