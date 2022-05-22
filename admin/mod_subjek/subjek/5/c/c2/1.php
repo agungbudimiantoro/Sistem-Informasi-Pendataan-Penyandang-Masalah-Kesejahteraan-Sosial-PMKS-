@@ -13,7 +13,7 @@ $array_btk_kkrs_es = array('pelecehan', 'pencabulan', 'sodomi', 'perkosaan');
         <?php for ($i = 0; $i < count($array_dpt_kkrs_es); $i++) : ?>
             <?php $data_for = $array_dpt_kkrs_es[$i]; ?>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="dpt_kkrs_es" id="dpt_kkrs_es" value="<?= $data_for ?>">
+                <input class="form-check-input" type="radio" name="dpt_kkrs_es" id="dpt_kkrs_es" value="<?= $data_for ?>">
                 <label class="form-check-label" style="text-transform:capitalize;" for="dpt_kkrs_es"><?= $data_for ?></label>
             </div>
         <?php endfor; ?>

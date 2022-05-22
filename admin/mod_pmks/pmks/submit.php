@@ -10,9 +10,7 @@
             <tr>
 
                 <td style="padding-top:20px;">
-                    <p style="text-transform:capitalize;" for="foto" class="form-label">foto</p>
-                    <small>jangan pilih foto untuk menggunakan foto lama</small>
-                    <input readonly type="file" name="file" class="form-control" id="foto" aria-describedby="emailHelp">
+
                 </td>
                 </td>
             </tr>
@@ -80,7 +78,7 @@
                     <?php else : ?>
                     <td colspan="4" align="right"> <button type="submit" name="add" class="btn btn-primary">simpan</button>
                     <?php endif; ?>
-                    <button onclick="history.back()" class="btn btn-success">Kembali</button>
+                    <a href="?p=pmks_data" class="btn btn-success">Kembali</a>
                     </td>
             </tr>
         </table>

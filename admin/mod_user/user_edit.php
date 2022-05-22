@@ -58,9 +58,9 @@ $data = mysqli_fetch_assoc($query);
                     <option value="kasi subbid resos tuna sosial dan perdagangan orang" <?php if ($data['jbtn'] == 'kasi subbid resos tuna sosial dan perdagangan orang') {
                                                                                             echo "selected";
                                                                                         }; ?>>Kasi subbid resos tuna sosial dan perdagangan orang</option>
-                    <option value="petugas" <?php if ($data['jbtn'] == 'petugas') {
+                    <option value="anggota" <?php if ($data['jbtn'] == 'anggota') {
                                                 echo "selected";
-                                            }; ?>>petugas</option>
+                                            }; ?>>anggota</option>
                 </select>
             </div>
             <div class="mb-3">

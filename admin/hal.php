@@ -56,7 +56,7 @@ $level = $_SESSION['level'];
     include "data/grafik_pmks.php";
   }
   ?>
-  <?php // include '../assets/chart.js/path.php'; 
+  <?php include '../assets/chart.js/path.php';
   ?>
 </body>
 

@@ -8,10 +8,10 @@ $array_akte = array('ya', 'tidak', 'tidak tau');
         <?php for ($i = 0; $i < count($array_sts_tmp_tgl); $i++) : ?>
             <?php $data_for = $array_sts_tmp_tgl[$i]; ?>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" <?php if ($data['sts_tmp_tgl'] == $data_for) {
-                                                                            echo "checked";
-                                                                        };
-                                                                        fungsiDisabled($p, 'disabled'); ?> name="sts_tmp_tgl" id="sts_tmp_tgl" value="<?= $data_for ?>">
+                <input class="form-check-input" type="radio" <?php if ($data['sts_tmp_tgl'] == $data_for) {
+                                                                    echo "checked";
+                                                                };
+                                                                fungsiDisabled($p, 'disabled'); ?> name="sts_tmp_tgl" id="sts_tmp_tgl" value="<?= $data_for ?>">
                 <label class="form-check-label" style="text-transform:capitalize;" for="sts_tmp_tgl"><?= $data_for ?></label>
             </div>
         <?php endfor; ?>
@@ -21,10 +21,10 @@ $array_akte = array('ya', 'tidak', 'tidak tau');
         <?php for ($i = 0; $i < count($array_akte); $i++) : ?>
             <?php $data_for = $array_akte[$i]; ?>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" <?php if ($data['akte'] == $data_for) {
-                                                                            echo "checked";
-                                                                        };
-                                                                        fungsiDisabled($p, 'disabled'); ?> name="akte" id="akte" value="<?= $data_for ?>">
+                <input class="form-check-input" type="radio" <?php if ($data['akte'] == $data_for) {
+                                                                    echo "checked";
+                                                                };
+                                                                fungsiDisabled($p, 'disabled'); ?> name="akte" id="akte" value="<?= $data_for ?>">
                 <label class="form-check-label" style="text-transform:capitalize;" for="akte"><?= $data_for ?></label>
             </div>
         <?php endfor; ?>

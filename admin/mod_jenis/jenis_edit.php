@@ -16,7 +16,7 @@ $data = mysqli_fetch_assoc($query);
         </div>
     </div>
     <button type="submit" name="edit" class="btn btn-primary">Ubah</button>
-    <button onclick="history.back()" class="btn btn-success">Kembali</button>
+    <a href="?p=jenis_data" class="btn btn-success">Kembali</a>
 </form>
 </div>
 </div>

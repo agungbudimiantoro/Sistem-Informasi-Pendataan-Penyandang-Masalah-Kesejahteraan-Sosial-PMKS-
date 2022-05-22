@@ -43,7 +43,7 @@
                        <option value="kasi subbid resos anak dan lanjut usia">Kasi subbid resos anak dan lanjut usia</option>
                        <option value="kasi subbid resos penyandang disabilitas">Kasi subbid resos penyandang disabilitas</option>
                        <option value="kasi subbid resos tuna sosial dan perdagangan orang">Kasi subbid resos tuna sosial dan perdagangan orang</option>
-                       <option value="petugas">petugas</option>
+                       <option value="anggota">anggota</option>
                    </select>
                </div>
                <div class="mb-3">

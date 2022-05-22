@@ -5,7 +5,7 @@ $array_btk_kgt = array('mengamen', 'mengemis');
     <p style="text-transform:capitalize;"><b>B. pengalaman dijalan</b></p>
     <div class="col-md-6 border">
         <p style="text-transform:capitalize;">sejak kapan saudara/i melakukan aktivitas dijalan:</p>
-        <input type="text" class="mb-2" value="<?= $data['kpn_mjln'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="kpn_mjln" id="kpn_mjln" size="50" required>
+        <input type="text" class="mb-2" value="<?= $data['kpn_mjln'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="kpn_mjln" id="kpn_mjln" size="50">
     </div>
     <div class="col-md-6 border">
         <p style="text-transform:capitalize;">bentuk kegiatan di jalanan yang saudara/i:</p>

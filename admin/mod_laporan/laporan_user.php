@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-5"></div>
     <div class="col-md-2">
-        <a href="mod_print/laporan.php" target="_blank" class="btn btn-primary text-center">cetak</a>
+        <a href="mod_print/laporan_user.php" target="_blank" class="btn btn-primary text-center">cetak</a>
         <button onclick="history.back()" class="btn btn-success">Kembali</button>
     </div>
 </div>
