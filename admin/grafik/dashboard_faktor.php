@@ -1,33 +1,70 @@
 <?php
-if (isset($_POST['tahun'])) {
-    $tahun = $_POST['tahun'];
-} else {
-    $tahun = date('Y');
-}
+// if (isset($_POST['laporan'])) {
+//     $laporan = $_POST['laporan'];
+//     echo "
+//     <script language=javascript>
+//       document.location.href='?p=user_data';
+//     </script>";
+// }
 ?>
-
-<h1>Data Faktor PMKS tahun <?= $tahun ?></h1>
-<div class="row m-3">
-    <label for="username" class="form-label">Tahun</label>
-    <div class="col-md-4">
-        <form action="?p=dashboard_faktor" method="POST">
-            <select class="form-select" aria-label="Default select example" name="tahun">
+<div class="row">
+    <div class="col-md-3">
+        <div class="card border-success mb-3">
+            <div class="card-header">Total User</div>
+            <div class="card-body text-success">
                 <?php
-                $tahun_now = date('Y');
-                for ($i = $tahun_now - 5; $i <= $tahun_now; $i++) :
+                $query = mysqli_query($conn, "SELECT COUNT(id_user) as total from user");
+                $data = mysqli_fetch_assoc($query);
                 ?>
-                    <option value="<?= $i ?>" <?php if ($i == $tahun) {
-                                                    echo "selected";
-                                                } ?>><?= $i ?></option>
-                <?php endfor; ?>
-            </select>
+                <h1 class="card-title"><?= $data['total']; ?></h2>
+            </div>
+        </div>
     </div>
-    <div class="col-md-2">
-        <button type="submit" name="add" class="btn btn-primary">cari</button>
-        </form>
+    <div class="col-md-3">
+        <div class="card border-warning mb-3">
+            <?php
+            $query = mysqli_query($conn, "SELECT COUNT(id_jns_pmks) as total from jns_pmks");
+            $data = mysqli_fetch_assoc($query);
+            ?>
+            <div class="card-header">Total jenis pmks</div>
+            <div class="card-body text-warning">
+                <h1 class="card-title"><?= $data['total']; ?></h2>
+            </div>
+        </div>
     </div>
+    <div class="col-md-3">
+        <div class="card border-primary mb-3">
+            <div class="card-header">Total subjek</div>
+            <?php
+            $query = mysqli_query($conn, "SELECT COUNT(id_subjek) as total from subjek");
+            $data = mysqli_fetch_assoc($query);
+            ?>
+            <div class="card-body text-primary">
+                <h1 class="card-title"><?= $data['total']; ?></h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-danger mb-3">
+            <div class="card-header">Total tindakan</div>
+            <div class="card-body text-danger">
+                <?php
+                $query = mysqli_query($conn, "SELECT COUNT(id_tindakan) as total from tindakan");
+                $data = mysqli_fetch_assoc($query);
+                ?>
+                <h1 class="card-title"><?= $data['total']; ?></h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-danger mb-3">
+            <canvas id="barChart" style="max-height: 500px; max-width: 100%;"></canvas>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card border-danger mb-3">
+            <canvas id="barChart1" style="max-height: 500px; max-width: 100%;"></canvas>
+        </div>
+    </div>
+
 </div>
-<div class="col-md-12">
-    <canvas id="grafikPmks" style="min-height: 300px; min-width: 200px; max-width: 100%;"></canvas>
-</div>
-<br>

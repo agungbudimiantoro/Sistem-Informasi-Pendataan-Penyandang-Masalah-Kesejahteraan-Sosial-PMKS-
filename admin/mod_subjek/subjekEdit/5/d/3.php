@@ -29,7 +29,7 @@
         <table>
             <tr>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_penertipan" class="form-label">status penertipan</label></td>
-                <td> <input type="text" value="<?= $data['sts_penertipan'] ?>" required <?php fungsiDisabled($p, 'disabled'); ?> name="sts_penertipan" class="form-control" id="sts_penertipan" aria-describedby="emailHelp"></td>
+                <td> <input type="text" value="<?= $data['sts_penertipan'] ?>" <?php fungsiDisabled($p, 'disabled'); ?> name="sts_penertipan" class="form-control" id="sts_penertipan" aria-describedby="emailHelp"></td>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_tndk" class="form-label">status tindakan</label></td>
                 <td>
                     <select class="form-select" aria-label="Default select example" required <?php fungsiDisabled($p, 'disabled'); ?> name="sts_tndk">
@@ -55,7 +55,12 @@
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="tgl_pendataan" class="form-label">tanggal</label></td>
                 <td> <input type="date" value="<?= date("Y-m-d") ?>" readonly <?php fungsiDisabled($p, 'disabled'); ?> name="tgl_pendataan" class="form-control" id="tgl_pendataan" aria-describedby="emailHelp"></td>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="jam" class="form-label">jam</label></td>
-                <td> <input type="time" value="<?= date("H:i") ?>" readonly <?php fungsiDisabled($p, 'disabled'); ?> name="jam" class="form-control" id="jam" aria-describedby="emailHelp"></td>
+                <td> <input type="time" value="<?php
+                                                if ($_GET['p'] == 'subjek_views') {
+                                                    echo $data['jam'];
+                                                } else {
+                                                    echo date("H:i");
+                                                } ?>" readonly <?php fungsiDisabled($p, 'disabled'); ?> name="jam" class="form-control" id="jam" aria-describedby="emailHelp"></td>
 
             </tr>
             <?php if ($p == 'subjek_edit') {

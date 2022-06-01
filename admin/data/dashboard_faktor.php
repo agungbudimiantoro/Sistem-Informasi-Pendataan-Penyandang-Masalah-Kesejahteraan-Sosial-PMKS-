@@ -1,69 +1,79 @@
-<?php
-if (isset($_POST['tahun'])) {
-    $tahun = $_POST['tahun'];
-} else {
-    $tahun = date('Y');
-}
-?>
 <script>
-    var dataSets = [
-        <?php
-        $query_faktor = mysqli_query($conn, "SELECT * from dt_pmks group by faktor");
-        while ($data_faktor = mysqli_fetch_assoc($query_faktor)) :
-            $faktor = $data_faktor['faktor'];
-        ?> {
-                label: '<?= $faktor ?>',
-                backgroundColor: 'rgba(214, 48, 49,1.0)',
-                borderColor: 'rgba(0,0,0,0.8)',
-                pointRadius: false,
-                pointColor: '#000',
-                pointStrokeColor: 'rgba(0,0,0,1)',
-                pointHighlightFill: '#fff',
-                pointHighlightStroke: 'rgba(0,0,0,1)',
-                data: [<?php
-                        for ($i = 1; $i <= 12; $i++) {
-                            $query_bulan = mysqli_query($conn, "SELECT COUNT(dt_pmks.id_dt_pmks) as jumlah FROM dt_pmks, subjek WHERE
-                    subjek.id_subjek = dt_pmks.id_subjek and dt_pmks.faktor = '$faktor' and month(tgl) = $i and YEAR(tgl) = $tahun");
-                            $pen_line = mysqli_fetch_assoc($query_bulan);
-                            if ($pen_line == null) {
-                                echo 0;
-                            } else {
-                                echo $pen_line['jumlah'];
-                            }
-                            echo ',';
-                        } ?>],
-            },
-        <?php endwhile; ?>
-    ];
-
-
     var data = {
-        labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
-        datasets: dataSets
-    }
+        datasets: [{
+            data: [<?php
+                    $query_data = mysqli_query($conn, "SELECT COUNT(id_tindakan) as total from tindakan");
+                    $data_data = mysqli_fetch_assoc($query_data);
+                    echo $data_data['total'];
+                    echo ',';
+                    $query_data2 = mysqli_query($conn, "SELECT COUNT(id_jns_pmks) as total from jns_pmks");
+                    $data_data2 = mysqli_fetch_assoc($query_data2);
+                    echo $data_data2['total'];
+                    echo ',';
+                    $query_data3 = mysqli_query($conn, "SELECT COUNT(id_subjek) as total from subjek");
+                    $data_data3 = mysqli_fetch_assoc($query_data3);
+                    echo $data_data3['total'];
+                    ?>],
+            backgroundColor: ['rgba(190, 55, 55,1.0)', 'rgba(22,21, 122,1.0)', 'rgba(242,221, 122,1.0)']
+        }],
+        labels: [
+            'Tindakan',
+            'PMKS',
+            'Subjek',
+        ],
+
+    };
 
     //-------------
     //- BAR CHART -
     //-------------
-    var barChart = $('#grafikPmks');
+    var barChart = $('#barChart');
     var barChartData = jQuery.extend(true, {}, data)
 
-    var barChartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        datasetFill: false,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        },
-    }
+    var barChartOptions = {}
 
     var barChart = new Chart(barChart, {
-        type: 'bar',
+        type: 'pie',
         data: barChartData,
         options: barChartOptions
     })
 </script>
+
+
+<script>
+    var data = {
+        datasets: [{
+            data: [<?php
+                    $query_data = mysqli_query($conn, "SELECT COUNT(IF(jk='laki-laki',1, NULL)) as total from user");
+                    $data_data = mysqli_fetch_assoc($query_data);
+                    echo $data_data['total'];
+                    echo ',';
+                    $query_data2 = mysqli_query($conn, "SELECT COUNT(IF(jk='perempuan',1, NULL)) as total from user");
+                    $data_data2 = mysqli_fetch_assoc($query_data2);
+                    echo $data_data2['total'];
+                    ?>],
+            backgroundColor: ['rgba(190, 55, 55,1.0)', 'rgba(22,21, 122,1.0)', 'rgba(242,221, 122,1.0)']
+        }],
+        labels: [
+            'Laki-laki',
+            'Perempuan',
+        ],
+
+    };
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var barChart = $('#barChart1');
+    var barChartData = jQuery.extend(true, {}, data)
+
+    var barChartOptions = {}
+
+    var barChart = new Chart(barChart, {
+        type: 'pie',
+        data: barChartData,
+        options: barChartOptions
+    })
+</script>
+
+<?php

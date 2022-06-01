@@ -40,6 +40,7 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl lahir</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">umur</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">almt</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">kecamatan</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama ayah</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama ibu</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">faktor</th>
@@ -89,6 +90,9 @@
                                 <?= $data['almt'] ?>
                             </td>
                             <td>
+                                <?= $data['kecamatan'] ?>
+                            </td>
+                            <td>
                                 <?= $data['nm_ayah'] ?>
                             </td>
                             <td>
@@ -130,7 +134,7 @@
             <tr>
                 <td width="73%"></td>
                 <td>
-                    <p class="text-center"><small>Lubuklinggau, Tgl</small></p>
+                    <p class="text-center"><small>Lubuklinggau, <?= date('d-m-Y') ?></small></p>
                     <p class="text-center"><small>Diketahui oleh,</small></p>
                     <p class="text-center"><small>kepala Dinas Sosial Kota Lubuklinggau</small></p>
                     <br>

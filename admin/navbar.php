@@ -4,7 +4,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <h3 class="nav-link active" aria-current="page">Halaman Admin | </h3>
+                    <h3 class="nav-link active text-capitalize" aria-current="page">Halaman <?php echo $level ?> | </h3>
                 </li>
                 <li class="nav-item">
                     <h4 class="nav-link active" aria-current="page"><?= $nm_user ?></h4>

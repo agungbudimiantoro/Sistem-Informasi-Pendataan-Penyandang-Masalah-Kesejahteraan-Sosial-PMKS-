@@ -17,7 +17,7 @@
             <td> <input type="text" name="sts_penertipan" class="form-control" id="sts_penertipan" aria-describedby="emailHelp"></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_tndk" class="form-label">status tindakan</label></td>
             <td>
-                <select class="form-select" aria-label="Default select example" name="sts_tndk">
+                <select class="form-select" aria-label="Default select example" name="sts_tndk" required>
                     <option value="" diasabled selected>pilih status tindakan</option>
                     <option value="peringatan">peringatan</option>
                     <option value="tindak lanjuti">tindak lanjuti</option>

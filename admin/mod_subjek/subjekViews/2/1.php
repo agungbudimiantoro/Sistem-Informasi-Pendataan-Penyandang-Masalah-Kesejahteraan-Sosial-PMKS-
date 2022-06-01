@@ -13,7 +13,7 @@
             <td> <input type="text" value="<?= $data['nm_pgl_ayah'] ?>" readonly name="nm_pgl_ayah" class="form-control" id="nm_pgl_ayah" aria-describedby="emailHelp" required></td>
 
             <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_ibu" class="form-label">status ayah:</label></td>
-            <td> <input type="text" value="<?= $data['nm_ibu'] ?>" readonly name="nm_ibu" class="form-control" id="nm_ibu" aria-describedby="emailHelp" required></td>
+            <td> <input type="text" value="<?= $data['sts_ayah'] ?>" readonly name="nm_ibu" class="form-control" id="nm_ibu" aria-describedby="emailHelp" required></td>
 
         </tr>
         <tr>
@@ -24,7 +24,7 @@
             <td> <input type="text" value="<?= $data['nm_pgl_ibu'] ?>" readonly name="nm_pgl_ibu" class="form-control" id="nm_pgl_ibu" aria-describedby="emailHelp" required></td>
 
             <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_pgl_ibu" class="form-label">status ibu:</label></td>
-            <td> <input type="text" value="<?= $data['nm_pgl_ibu'] ?>" readonly name="nm_pgl_ibu" class="form-control" id="nm_pgl_ibu" aria-describedby="emailHelp" required></td>
+            <td> <input type="text" value="<?= $data['sts_ibu'] ?>" readonly name="nm_pgl_ibu" class="form-control" id="nm_pgl_ibu" aria-describedby="emailHelp" required></td>
 
         </tr>
     </table>

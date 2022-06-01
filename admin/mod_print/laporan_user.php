@@ -96,7 +96,7 @@
             <tr>
                 <td width="65%"></td>
                 <td>
-                    <p class="text-center"><small>Lubuklinggau, Tgl</small></p>
+                    <p class="text-center"><small>Lubuklinggau, <?= date('d-m-Y') ?></small></p>
                     <p class="text-center"><small>Diketahui oleh,</small></p>
                     <p class="text-center"><small>kepala Dinas Sosial Kota Lubuklinggau</small></p>
                     <br>

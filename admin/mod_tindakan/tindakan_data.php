@@ -9,21 +9,21 @@
             <tr>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">foto</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nik</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jk</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl lahir</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jenis kelamin</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tanggal lahir</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">umur</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">almt</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm ayah</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm ibu</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">alamat</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama ayah</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama ibu</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">faktor</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jns pmks</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">pntn tigl</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ket</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tdk</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm_ptgs</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jenis pmks</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">penempatan tinggal</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">keterangan</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tindakan</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tanggal</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama petugas</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
             </tr>
         </thead>

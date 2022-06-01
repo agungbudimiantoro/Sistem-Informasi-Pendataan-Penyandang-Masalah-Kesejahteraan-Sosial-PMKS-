@@ -9,15 +9,15 @@
             <tr>
                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">foto</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm user</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl lhr</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jk</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tlpo</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">almt</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jbt</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama user</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tanggal lahir</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jenis kelamin</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">telepon</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">alamat</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jabatan</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Username</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">level</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">sts</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">status</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
             </tr>
         </thead>

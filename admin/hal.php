@@ -50,6 +50,7 @@ $level = $_SESSION['level'];
   </script>
   <?php if ($p == 'grafik_pmks') {
     include "data/grafik_pmks.php";
+    include "data/dashboard_faktor.php";
   } elseif ($p == 'dashboard_faktor') {
     include "data/dashboard_faktor.php";
   } else {

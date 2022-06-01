@@ -6,7 +6,6 @@ if (isset($_POST['tahun'])) {
 }
 ?>
 <script>
-    const randomNumber1 = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
     var dataSets = [{
         label: 'P',
         backgroundColor: 'rgba(214, 48, 49,1.0)',
@@ -100,13 +99,13 @@ if (isset($_GET['tahun'])) {
             $jns_pmks = $data_jns_pmks['jns_pmks'];
         ?> {
                 label: '<?= $jns_pmks ?>',
-                backgroundColor: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',1.0)',
-                borderColor: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',0.8)',
+                backgroundColor: 'rgba(214, 48, 49,1.0)',
+                borderColor: 'rgba(0,0,0,0.8)',
                 pointRadius: false,
                 pointColor: '#000',
-                pointStrokeColor: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',1)',
+                pointStrokeColor: 'rgba(0,0,0,1)',
                 pointHighlightFill: '#fff',
-                pointHighlightStroke: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',1)',
+                pointHighlightStroke: 'rgba(0,0,0,1)',
                 data: [<?php
 
                         for ($i = $tahun - 5; $i <= $tahun; $i++) {
