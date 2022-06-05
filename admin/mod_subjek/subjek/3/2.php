@@ -1,5 +1,5 @@
 <?php
-$array_als_pts_sklh = array('tdk ada biaya', 'disuruh ortu', 'jaraknya jauh pernah', 'sdh bkerja', 'dikeluarkan', 'malas sklh');
+$array_als_pts_sklh = array('tidak ada biaya', 'disuruh ortu', 'jaraknya jauh', 'sudah bekerja', 'dikeluarkan', 'malas sekolah');
 
 ?>
 <div class="row border">

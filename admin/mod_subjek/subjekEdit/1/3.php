@@ -1,7 +1,7 @@
 <?php
 
 $array_pmpln = array('terawat', 'tidak terawat');
-$array_kmp_bcr = array('lancar', 'krng lancar (terbata/bata)', 'pasif');
+$array_kmp_bcr = array('lancar', 'kurang lancar (terbata/bata)', 'pasif');
 ?>
 <div class="row border">
     <div class="col-md-6 border">

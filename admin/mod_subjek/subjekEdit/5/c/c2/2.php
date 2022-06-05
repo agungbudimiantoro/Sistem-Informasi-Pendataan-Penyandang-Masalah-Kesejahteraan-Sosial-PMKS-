@@ -1,5 +1,5 @@
 <?php
-$array_org_mlk_kkrs_es = array('orang tua', 'anggota kluarga lain', 'tetangga', 'teman', 'pacar');
+$array_org_mlk_kkrs_es = array('orang tua', 'anggota keluarga lain', 'tetangga', 'teman', 'pacar');
 $org_mlk_kkrs_es = unserialize($data['org_mlk_kkrs_es']);
 $result_org_mlk_kkrs_es = array_diff($org_mlk_kkrs_es, $array_org_mlk_kkrs_es);
 ?>

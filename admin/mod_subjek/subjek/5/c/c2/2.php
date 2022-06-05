@@ -1,5 +1,5 @@
 <?php
-$array_org_mlk_kkrs_es = array('orang tua', 'anggota kluarga lain', 'tetangga', 'teman', 'pacar');
+$array_org_mlk_kkrs_es = array('orang tua', 'anggota keluarga lain', 'tetangga', 'teman', 'pacar');
 
 ?>
 

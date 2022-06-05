@@ -6,20 +6,20 @@
             </td>
         </tr>
         <tr>
-            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_ayah" class="form-label">nm ayah</label></td>
+            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_ayah" class="form-label">nama ayah</label></td>
             <td> <input type="text" name="nm_ayah" class="form-control" id="nm_ayah" aria-describedby="emailHelp"></td>
 
-            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_pgl_ayah" class="form-label">nm pglan ayah</label></td>
+            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_pgl_ayah" class="form-label">nama panggilan ayah</label></td>
             <td> <input type="text" name="nm_pgl_ayah" class="form-control" id="nm_pgl_ayah" aria-describedby="emailHelp"></td>
 
             <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="pkj_ayah" class="form-label">pekerjaan ayah</label></td>
             <td> <input type="text" name="pkj_ayah" class="form-control" id="pkj_ayah" aria-describedby="emailHelp"></td>
         </tr>
         <tr>
-            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_ibu" class="form-label">nm ibu</label></td>
+            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_ibu" class="form-label">nama ibu</label></td>
             <td> <input type="text" name="nm_ibu" class="form-control" id="nm_ibu" aria-describedby="emailHelp"></td>
 
-            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_pgl_ibu" class="form-label">nm pglan ibu</label></td>
+            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_pgl_ibu" class="form-label">nama panggilan ibu</label></td>
             <td> <input type="text" name="nm_pgl_ibu" class="form-control" id="nm_pgl_ibu" aria-describedby="emailHelp"></td>
 
             <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="pkj_ibu" class="form-label">pekerjaan ibu</label></td>

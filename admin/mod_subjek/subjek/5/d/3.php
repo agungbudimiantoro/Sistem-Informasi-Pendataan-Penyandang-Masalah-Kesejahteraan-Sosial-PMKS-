@@ -6,7 +6,7 @@
                 <input type="text" class="mb-2" name="als_mks_npz" id="als_mks_npz">
             </td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="foto" class="form-label">foto</label></td>
-            <td> <input type="file" name="file" class="form-control" id="foto" aria-describedby="emailHelp"></td>
+            <td> <input type="file" name="file" class="form-control" id="foto" aria-describedby="emailHelp" required></td>
             <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="sts_jns_pmks" class="form-label">status jenis PMKS</label></td>
             <td> <input type="text" name="sts_jns_pmks" value="belum ditetapkan" readonly class="form-control" id="sts_jns_pmks" aria-describedby="emailHelp"></td>
         </tr>

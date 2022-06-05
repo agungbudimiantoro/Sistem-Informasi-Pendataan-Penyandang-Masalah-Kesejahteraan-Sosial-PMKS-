@@ -11,6 +11,7 @@
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">foto</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama lengkap</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama panggilan</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jenis kelamin</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tanggal lahir</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">alamat</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama ayah</th>
@@ -39,6 +40,9 @@
                     </td>
                     <td>
                         <?= $data['nm_pgl'] ?>
+                    </td>
+                    <td>
+                        <?= $data['jk'] ?>
                     </td>
                     <td>
                         <?= $data['tgl_lahir'] ?>

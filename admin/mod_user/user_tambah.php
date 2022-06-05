@@ -29,7 +29,7 @@
                <div class="mb-3">
                    <label style="text-transform:capitalize;" for="foto" class="form-label">foto</label>
                    <small class="form-text text-muted">Extensi File Hanya .DOC, .DOCX, </small>
-                   <input type="file" name="file" class="form-control" onchange="validate(this);" id="foto" aria-describedby="emailHelp" required>
+                   <input type="file" required name="file" class="form-control" onchange="validate(this);" id="foto" aria-describedby="emailHelp" required>
                </div>
 
            </div>

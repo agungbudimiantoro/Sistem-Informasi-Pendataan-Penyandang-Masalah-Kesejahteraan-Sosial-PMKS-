@@ -18,9 +18,9 @@
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">status sekolah</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">riwayat penyakit</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">status tindak</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">alasab melakukan kegiatan</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">bentuk kekerasan fm</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama petugas</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">alasan melakukan kegiatan di jalan</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">bentuk kekerasan fisik dan mental</th>
+                <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama petugas</th> -->
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
             </tr>
         </thead>
@@ -81,9 +81,9 @@
                         }
                         ?>
                     </td>
-                    <td>
+                    <!-- <td>
                         <?= $data['nm_ptgs'] ?>
-                    </td>
+                    </td> -->
                     <td>
                         <a href="?p=pmks_tambah_form&id=<?= $data['id_subjek'] ?>" class="btn btn-primary">Proses</a>
                     </td>

@@ -36,7 +36,7 @@
                     <tr>
                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">foto</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nm</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nik</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jenis kelamin</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tanggal lahir</th>

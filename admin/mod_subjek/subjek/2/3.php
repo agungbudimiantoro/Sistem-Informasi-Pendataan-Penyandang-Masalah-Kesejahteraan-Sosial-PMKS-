@@ -1,5 +1,5 @@
 <?php
-$array_trhir_ktm_klg = array('krng dari smnggu lalu', 'sbulan lalu', 'tiga bulan lalu', 'stahun lalu');
+$array_trhir_ktm_klg = array('kurang dari seminggu lalu', 'sebulan lalu', 'tiga bulan lalu', 'setahun lalu');
 ?>
 <div class="row border">
     <div class="col-md-12 border">
@@ -13,7 +13,7 @@ $array_trhir_ktm_klg = array('krng dari smnggu lalu', 'sbulan lalu', 'tiga bulan
         <?php endfor; ?>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="trhir_ktm_klg" id="trhir_ktm_klg" value="">
-            <label class="form-check-label" style="text-transform:capitalize;" for="trhir_ktm_klg">lainya, sbutkan kpan:</label>
+            <label class="form-check-label" style="text-transform:capitalize;" for="trhir_ktm_klg">lainya, Sebutkan Kapan:</label>
             <input type="text" name="trhir_ktm_klg1" value="">
         </div>
     </div>

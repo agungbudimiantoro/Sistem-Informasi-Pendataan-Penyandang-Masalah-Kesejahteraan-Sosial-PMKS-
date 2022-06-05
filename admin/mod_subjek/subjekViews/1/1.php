@@ -8,16 +8,16 @@
             </td>
         </tr>
         <tr>
-            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_lkp" class="form-label">nm lkp</label></td>
+            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_lkp" class="form-label">nama lengkap</label></td>
             <td> <input value="<?= $data['nm_lkp'] ?>" readonly type="text" name="nm_lkp" class="form-control" id="nm_lkp" aria-describedby="emailHelp" required></td>
 
-            <td> <label style="text-transform:capitalize;" for="tmpt_lahir" class="form-label">tmpt lhr</label></td>
+            <td> <label style="text-transform:capitalize;" for="tmpt_lahir" class="form-label">tempat lahir</label></td>
             <td> <input value="<?= $data['tmpt_lahir'] ?>" readonly type="text" name="tmpt_lahir" class="form-control" id="tmpt_lahir" aria-describedby="emailHelp" required></td>
 
-            <td><label style="text-transform:capitalize;" for="almt" class="form-label">almt</label></td>
+            <td><label style="text-transform:capitalize;" for="almt" class="form-label">alamat</label></td>
             <td><input value="<?= $data['almt'] ?>" readonly type="text" name="almt" class="form-control" id="almt" aria-describedby="emailHelp" required></td>
             <td>
-                <label style="text-transform:capitalize;" for="exampleInputPassword1" class="form-label">kcmtan</label>
+                <label style="text-transform:capitalize;" for="exampleInputPassword1" class="form-label">kecamatan</label>
             </td>
             <td>
                 <select class="form-select" disabled aria-label="Default select example" name="kecamatan" required>
@@ -50,9 +50,9 @@
             </td>
         </tr>
         <tr>
-            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_pgl" class="form-label">nm pgl</label></td>
+            <td style="padding-top:20px;"> <label style="text-transform:capitalize;" for="nm_pgl" class="form-label">nama panggilan</label></td>
             <td> <input value="<?= $data['nm_pgl'] ?>" readonly type="text" name="nm_pgl" class="form-control" id="nm_pgl" aria-describedby="emailHelp" required></td>
-            <td> <label style="text-transform:capitalize;" for="tgl_lahir" class="form-label">tgl lahir</label></td>
+            <td> <label style="text-transform:capitalize;" for="tgl_lahir" class="form-label">tanggal lahir</label></td>
             <td> <input value="<?= $data['tgl_lahir'] ?>" readonly type="date" name="tgl_lahir" class="form-control" id="tgl_lahir" aria-describedby="emailHelp" required></td>
             <td> <label style="text-transform:capitalize;" for="cr_fisik" class="form-label">ciri-ciri fisik</label></td>
             <td colspan="3"><input value="<?= $data['cr_fisik'] ?>" readonly type="text" name="cr_fisik" class="form-control" id="cr_fisik" aria-describedby="emailHelp" required></td>

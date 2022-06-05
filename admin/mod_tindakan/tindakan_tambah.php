@@ -17,7 +17,7 @@
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama ibu</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">faktor</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">jenis pmks</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tgl</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">tanggal</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">nama petugas</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
             </tr>

@@ -1,5 +1,5 @@
 <?php
-$array_als_pts_sklh = array('tdk ada biaya', 'disuruh ortu', 'jaraknya jauh pernah', 'sdh bkerja', 'dikeluarkan', 'malas sklh');
+$array_als_pts_sklh = array('tidak ada biaya', 'disuruh ortu', 'jaraknya jauh pernah', 'sudah bekerja', 'dikeluarkan', 'malas sekolah');
 $als_pts_sklh = unserialize($data['als_pts_sklh']);
 $result_als_pts_sklh = array_diff($als_pts_sklh, $array_als_pts_sklh);
 ?>
