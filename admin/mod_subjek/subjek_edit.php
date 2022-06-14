@@ -1,4 +1,4 @@
-   <h3 class="text-center text-capitalize mb-3">view Data subjek</h3>
+   <h3 class="text-center text-capitalize mb-3">edit Data subjek</h3>
    <form action="?p=subjek_proses_edit" method="POST" enctype="multipart/form-data">
        <?php
         $no = 1;

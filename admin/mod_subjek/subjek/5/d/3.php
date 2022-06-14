@@ -21,6 +21,7 @@
                     <option value="" diasabled selected>pilih status tindakan</option>
                     <option value="peringatan">peringatan</option>
                     <option value="tindak lanjuti">tindak lanjuti</option>
+                    <option value="sudah ditindak lanjuti">sudah ditindak lanjuti</option>
                 </select>
             </td>
         </tr>

@@ -40,6 +40,9 @@
                         <option value="tindak lanjuti" <?php if ($data['sts_tndk'] == 'tindak lanjuti') {
                                                             echo 'selected';
                                                         } ?>>tindak lanjuti</option>
+                        <option value="sudah ditindak lanjuti" <?php if ($data['sts_tndk'] == 'sudah ditindak lanjuti') {
+                                                                    echo 'selected';
+                                                                } ?>>sudah ditindak lanjuti</option>
                     </select>
                 </td>
             </tr>

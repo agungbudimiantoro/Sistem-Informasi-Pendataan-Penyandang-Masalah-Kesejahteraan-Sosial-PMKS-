@@ -33,6 +33,9 @@
                         <option value="tindak lanjuti" <?php if ($data['sts_tndk'] == 'tindak lanjuti') {
                                                             echo 'selected';
                                                         } ?>>tindak lanjuti</option>
+                        <option value="sudah ditindak lanjuti" <?php if ($data['sts_tndk'] == 'sudah ditindak lanjuti') {
+                                                                    echo 'selected';
+                                                                } ?>>sudah ditindak lanjuti</option>
                     </select>
                 </td>
 
@@ -97,6 +100,7 @@
                                                                 } ?>" class="form-control" id="tindakan" aria-describedby="emailHelp" required></td>
                 <td> <input type="text" name="id_dt_pmks" hidden value="<?= $data['id_dt_pmks'] ?>" class="form-control" id="id_dt_pmks" aria-describedby="emailHelp" required></td>
                 <td> <input type="text" name="id_jns_pmks" hidden value="<?= $data['id_jns_pmks'] ?>" class="form-control" id="id_jns_pmks" aria-describedby="emailHelp" required></td>
+                <td> <input type="text" name="id" hidden value="<?= $data['id_tindakan'] ?>" class="form-control" id="id_jns_pmks" aria-describedby="emailHelp" required></td>
             </tr>
             <tr>
                 <td style="padding-top:20px;" align="right"> <label style="text-transform:capitalize;" for="tanggal" class="form-label">tanggal</label></td>

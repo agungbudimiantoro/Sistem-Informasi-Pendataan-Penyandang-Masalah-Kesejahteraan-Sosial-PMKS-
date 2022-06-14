@@ -26,6 +26,15 @@
             <br>
             <h3 class="text-center">Sistem Informasi Pendataan Penyandang Masalah Kesejahteraan</h3>
             <h3 class="text-center">Sosial (PMKS) pada Dinas Sosial Kota Lubuklinggau</h3>
+            <?php
+            if ($_POST['id_jns_pmks'] != null) :
+                include "../../koneksi.php";
+                $id_jns_pmks = $_POST['id_jns_pmks'];
+                $query1 = mysqli_query($conn, "SELECT * FROM jns_pmks where id_jns_pmks='$id_jns_pmks'");
+                $data1 = mysqli_fetch_assoc($query1);
+            ?>
+                <h3 class="text-center">jenis pmks : <?php echo $data1['jns_pmks'] ?></h3>
+            <?php endif; ?>
             <br>
             <p class="text-center">Jl. Depati said No: 49 kel Ulak Lebar Lubuklinggau Barat II</p>
             <br>

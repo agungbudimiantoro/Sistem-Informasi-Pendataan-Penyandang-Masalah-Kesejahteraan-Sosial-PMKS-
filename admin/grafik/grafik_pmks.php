@@ -35,6 +35,14 @@ if (isset($_POST['tahun'])) {
     <canvas id="grafikJenisPmks" style="min-height: 300px; min-width: 200px; max-width: 100%;"></canvas>
 </div>
 
+<br>
+<h1>Data perKecamatan</h1>
+<div class="col-md-12">
+    <canvas id="grafikCamat" style="min-height: 300px; min-width: 200px; max-width: 100%;"></canvas>
+</div>
+
+
+<!-- 
 <?php
 if (isset($_POST['tahun'])) {
     $tahun = $_POST['tahun'];
@@ -67,4 +75,4 @@ if (isset($_POST['tahun'])) {
 <div class="col-md-12">
     <canvas id="grafikPmks1" style="min-height: 300px; min-width: 200px; max-width: 100%;"></canvas>
 </div>
-<br>
+<br> -->

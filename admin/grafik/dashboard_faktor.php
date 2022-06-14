@@ -7,19 +7,50 @@
 //     </script>";
 // }
 ?>
-
+<h3>Dashboard Data Faktor Terjadinya PMKS <?php if (isset($_GET['tahun'])) {
+                                                if ($_GET['tahun'] != '') {
+                                                    $tahun = $_GET['tahun'];
+                                                    echo "TAHUN " . $_GET['tahun'];
+                                                }
+                                            } ?></h3>
 <div class="row">
     <?php
     $array_data = array('ekonomi', 'kurang kesadaran', 'kejiwaan', 'kurangnya pendidikan', 'eksploitasi', 'keterbatasan lapangan kerja');
 
     ?>
+    <form action="" method="GET">
+        <div class="row mt-2 mb-2">
+            <input type="text" value="dashboard_faktor" name="p" hidden>
+            <div class="col-md-4">
+                <select class="form-select" aria-label="Default select example" name="tahun">
+                    <option value="" diasabled selected>-- pilih tahun --</option>
+                    <?php for ($i = 2016; $i <= 2022; $i++) : ?>
+                        <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                    <?php endfor; ?>
+                </select>
+            </div>
+            <div class="col-md-4">
+
+                <button type="submit" class="btn btn-primary text-center">Filter</button>
+            </div>
+        </div>
+    </form>
+    <br>
     <?php for ($i = 0; $i < count($array_data); $i++) : ?>
         <div class="col-md-3">
             <div class="card border-success mb-3">
                 <div class="card-header"><?php echo $array_data[$i] ?></div>
                 <div class="card-body text-success">
                     <?php
-                    $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total from dt_pmks where faktor='$array_data[$i]'");
+                    if (isset($_GET['tahun'])) {
+                        if ($_GET['tahun'] != '') {
+                            $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total from dt_pmks where faktor='$array_data[$i]' and year(tgl)='$tahun'");
+                        } else {
+                            $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total from dt_pmks where faktor='$array_data[$i]'");
+                        }
+                    } else {
+                        $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total from dt_pmks where faktor='$array_data[$i]'");
+                    }
                     $data = mysqli_fetch_assoc($query);
                     ?>
                     <h1 class="card-title"><?= $data['total']; ?></h2>
@@ -28,7 +59,15 @@
         </div>
     <?php endfor; ?>
     <?php
-    $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total, faktor from dt_pmks group by faktor");
+    if (isset($_GET['tahun'])) {
+        if ($_GET['tahun'] != '') {
+            $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total, faktor from dt_pmks where year(tgl)='$tahun' group by faktor");
+        } else {
+            $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total, faktor from dt_pmks group by faktor");
+        }
+    } else {
+        $query = mysqli_query($conn, "SELECT COUNT(id_dt_pmks) as total, faktor from dt_pmks group by faktor");
+    }
     while ($data = mysqli_fetch_assoc($query)) :
     ?>
         <?php

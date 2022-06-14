@@ -165,3 +165,82 @@ if (isset($_GET['tahun'])) {
 </script>
 
 <?php
+
+if (isset($_GET['tahun_camat'])) {
+    $tahun_camat = $_GET['tahun_camat'];
+} else {
+    $tahun_camat = date('Y');
+}
+?>
+<script>
+    var dataSets = [
+        <?php
+        $data_camat = array("lubuklinggau barat 1", "lubuklinggau barat 2", "lubuklinggau timur 1", "lubuklinggau timur 2", "lubuklinggau utara 1", "lubuklinggau utara 2", "lubuklinggau selatan 1", "lubuklinggau selatan 2");
+        foreach ($data_camat as $data) :
+        ?> {
+                label: '<?= $data ?>',
+                backgroundColor: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',1.0)',
+                borderColor: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',0.8)',
+                pointRadius: false,
+                pointColor: '#000',
+                pointStrokeColor: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',1)',
+                pointHighlightFill: '#fff',
+                pointHighlightStroke: 'rgba(' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',' + randomNumber1(0, 255) + ',1)',
+                data: [<?php
+
+                        for ($i = $tahun_camat - 5; $i <= $tahun_camat; $i++) {
+                            $query_bulan = mysqli_query($conn, "SELECT COUNT(subjek_kedua.id_subjek_kedua) as jumlah FROM subjek, subjek_kedua WHERE
+                   subjek.id_subjek = subjek_kedua.id_subjek and subjek.kecamatan = '$data' and YEAR(tgl_pendataan) = $i");
+                            $pen_line = mysqli_fetch_assoc($query_bulan);
+                            if ($pen_line == null) {
+                                echo 0;
+                            } else {
+                                echo $pen_line['jumlah'];
+                            }
+                            echo ',';
+                        } ?>],
+            },
+        <?php endforeach; ?>
+    ];
+
+
+    var data = {
+        labels: [
+            <?php
+            for ($i = $tahun_camat - 5; $i <= $tahun_camat; $i++) {
+                echo "'";
+                echo $i;
+                echo "',";
+            }
+            ?>
+        ],
+        datasets: dataSets
+    }
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var barChart = $('#grafikCamat');
+    var barChartData = jQuery.extend(true, {}, data)
+
+    var barChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        datasetFill: false,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        },
+    }
+
+    var barChart = new Chart(barChart, {
+        type: 'bar',
+        data: barChartData,
+        options: barChartOptions
+    })
+</script>
+
+<?php
